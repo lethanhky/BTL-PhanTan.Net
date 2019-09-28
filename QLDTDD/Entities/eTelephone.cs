@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    class eTelephone
+    public class eTelephone
     {
         private int teleID;
         private string name;
