@@ -1,1 +1,78 @@
-﻿
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLDTDD" Class="QLDTDDDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=QLDTDD;Integrated Security=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="QLDTDDConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Account" Member="Accounts">
+    <Type Name="Account">
+      <Column Name="accID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="Account_Employee" Member="Employees" ThisKey="accID" OtherKey="accID" Type="Employee" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TypePhone" Member="TypePhones">
+    <Type Name="TypePhone">
+      <Column Name="typeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="typeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TypePhone_Telephone" Member="Telephones" ThisKey="typeID" OtherKey="typeID" Type="Telephone" />
+      <Association Name="TypePhone_WareHouse" Member="WareHouses" ThisKey="typeID" OtherKey="typeID" Type="WareHouse" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Employee" Member="Employees">
+    <Type Name="Employee">
+      <Column Name="empID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="state" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="accID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Employee_Order" Member="Orders" ThisKey="empID" OtherKey="empID" Type="Order" />
+      <Association Name="Account_Employee" Member="Account" ThisKey="accID" OtherKey="accID" Type="Account" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Order]" Member="Orders">
+    <Type Name="Order">
+      <Column Name="orderID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="total" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cusName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="orderDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="state" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="empName" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="empID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Order_OrderDetail" Member="OrderDetails" ThisKey="orderID" OtherKey="orderID" Type="OrderDetail" />
+      <Association Name="Employee_Order" Member="Employee" ThisKey="empID" OtherKey="empID" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrderDetail" Member="OrderDetails">
+    <Type Name="OrderDetail">
+      <Column Name="detailID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="unitprice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="amount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="orderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="teleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Order_OrderDetail" Member="Order" ThisKey="orderID" OtherKey="orderID" Type="Order" IsForeignKey="true" />
+      <Association Name="Telephone_OrderDetail" Member="Telephone" ThisKey="teleID" OtherKey="teleID" Type="Telephone" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Telephone" Member="Telephones">
+    <Type Name="Telephone">
+      <Column Name="teleID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="price" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="provider" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="state" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="typeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Telephone_OrderDetail" Member="OrderDetails" ThisKey="teleID" OtherKey="teleID" Type="OrderDetail" />
+      <Association Name="TypePhone_Telephone" Member="TypePhone" ThisKey="typeID" OtherKey="typeID" Type="TypePhone" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WareHouse" Member="WareHouses">
+    <Type Name="WareHouse">
+      <Column Name="wareID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="wareName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="typeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TypePhone_WareHouse" Member="TypePhone" ThisKey="typeID" OtherKey="typeID" Type="TypePhone" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

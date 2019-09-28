@@ -1,0 +1,6 @@
+D:\PhanTan\BTL_PhanTan\QLDTDD\BUS\bin\Debug\BUS.dll
+D:\PhanTan\BTL_PhanTan\QLDTDD\BUS\bin\Debug\BUS.pdb
+D:\PhanTan\BTL_PhanTan\QLDTDD\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+D:\PhanTan\BTL_PhanTan\QLDTDD\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\PhanTan\BTL_PhanTan\QLDTDD\BUS\obj\Debug\BUS.dll
+D:\PhanTan\BTL_PhanTan\QLDTDD\BUS\obj\Debug\BUS.pdb
