@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    class eOrder
+    public class eOrder
     {
         private int orderID;
         private double total;

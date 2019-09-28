@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    class eTypePhone
+    public class eTypePhone
     {
         private int typeID;
         private string typeName;
