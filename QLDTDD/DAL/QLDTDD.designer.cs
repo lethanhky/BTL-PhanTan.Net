@@ -22,6 +22,7 @@ namespace DAL
 	using System;
 	
 	
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QLDTDD")]
 	public partial class QLDTDDDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -29,7 +30,34 @@ namespace DAL
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
+    partial void InsertAccount(Account instance);
+    partial void UpdateAccount(Account instance);
+    partial void DeleteAccount(Account instance);
+    partial void InsertTypePhone(TypePhone instance);
+    partial void UpdateTypePhone(TypePhone instance);
+    partial void DeleteTypePhone(TypePhone instance);
+    partial void InsertEmployee(Employee instance);
+    partial void UpdateEmployee(Employee instance);
+    partial void DeleteEmployee(Employee instance);
+    partial void InsertOrder(Order instance);
+    partial void UpdateOrder(Order instance);
+    partial void DeleteOrder(Order instance);
+    partial void InsertOrderDetail(OrderDetail instance);
+    partial void UpdateOrderDetail(OrderDetail instance);
+    partial void DeleteOrderDetail(OrderDetail instance);
+    partial void InsertTelephone(Telephone instance);
+    partial void UpdateTelephone(Telephone instance);
+    partial void DeleteTelephone(Telephone instance);
+    partial void InsertWareHouse(WareHouse instance);
+    partial void UpdateWareHouse(WareHouse instance);
+    partial void DeleteWareHouse(WareHouse instance);
     #endregion
+		
+		public QLDTDDDataContext() : 
+				base(global::DAL.Properties.Settings.Default.QLDTDDConnectionString, mappingSource)
+		{
+			OnCreated();
+		}
 		
 		public QLDTDDDataContext(string connection) : 
 				base(connection, mappingSource)
@@ -53,6 +81,1582 @@ namespace DAL
 				base(connection, mappingSource)
 		{
 			OnCreated();
+		}
+		
+		public System.Data.Linq.Table<Account> Accounts
+		{
+			get
+			{
+				return this.GetTable<Account>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TypePhone> TypePhones
+		{
+			get
+			{
+				return this.GetTable<TypePhone>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Employee> Employees
+		{
+			get
+			{
+				return this.GetTable<Employee>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Order> Orders
+		{
+			get
+			{
+				return this.GetTable<Order>();
+			}
+		}
+		
+		public System.Data.Linq.Table<OrderDetail> OrderDetails
+		{
+			get
+			{
+				return this.GetTable<OrderDetail>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Telephone> Telephones
+		{
+			get
+			{
+				return this.GetTable<Telephone>();
+			}
+		}
+		
+		public System.Data.Linq.Table<WareHouse> WareHouses
+		{
+			get
+			{
+				return this.GetTable<WareHouse>();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Account")]
+	public partial class Account : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _accID;
+		
+		private string _username;
+		
+		private string _password;
+		
+		private EntitySet<Employee> _Employees;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnaccIDChanging(int value);
+    partial void OnaccIDChanged();
+    partial void OnusernameChanging(string value);
+    partial void OnusernameChanged();
+    partial void OnpasswordChanging(string value);
+    partial void OnpasswordChanged();
+    #endregion
+		
+		public Account()
+		{
+			this._Employees = new EntitySet<Employee>(new Action<Employee>(this.attach_Employees), new Action<Employee>(this.detach_Employees));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_accID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int accID
+		{
+			get
+			{
+				return this._accID;
+			}
+			set
+			{
+				if ((this._accID != value))
+				{
+					this.OnaccIDChanging(value);
+					this.SendPropertyChanging();
+					this._accID = value;
+					this.SendPropertyChanged("accID");
+					this.OnaccIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username", DbType="NVarChar(20)")]
+		public string username
+		{
+			get
+			{
+				return this._username;
+			}
+			set
+			{
+				if ((this._username != value))
+				{
+					this.OnusernameChanging(value);
+					this.SendPropertyChanging();
+					this._username = value;
+					this.SendPropertyChanged("username");
+					this.OnusernameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_password", DbType="NVarChar(20)")]
+		public string password
+		{
+			get
+			{
+				return this._password;
+			}
+			set
+			{
+				if ((this._password != value))
+				{
+					this.OnpasswordChanging(value);
+					this.SendPropertyChanging();
+					this._password = value;
+					this.SendPropertyChanged("password");
+					this.OnpasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Account_Employee", Storage="_Employees", ThisKey="accID", OtherKey="accID")]
+		public EntitySet<Employee> Employees
+		{
+			get
+			{
+				return this._Employees;
+			}
+			set
+			{
+				this._Employees.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Employees(Employee entity)
+		{
+			this.SendPropertyChanging();
+			entity.Account = this;
+		}
+		
+		private void detach_Employees(Employee entity)
+		{
+			this.SendPropertyChanging();
+			entity.Account = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TypePhone")]
+	public partial class TypePhone : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _typeID;
+		
+		private string _typeName;
+		
+		private System.Nullable<int> _quantity;
+		
+		private EntitySet<Telephone> _Telephones;
+		
+		private EntitySet<WareHouse> _WareHouses;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OntypeIDChanging(int value);
+    partial void OntypeIDChanged();
+    partial void OntypeNameChanging(string value);
+    partial void OntypeNameChanged();
+    partial void OnquantityChanging(System.Nullable<int> value);
+    partial void OnquantityChanged();
+    #endregion
+		
+		public TypePhone()
+		{
+			this._Telephones = new EntitySet<Telephone>(new Action<Telephone>(this.attach_Telephones), new Action<Telephone>(this.detach_Telephones));
+			this._WareHouses = new EntitySet<WareHouse>(new Action<WareHouse>(this.attach_WareHouses), new Action<WareHouse>(this.detach_WareHouses));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_typeID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int typeID
+		{
+			get
+			{
+				return this._typeID;
+			}
+			set
+			{
+				if ((this._typeID != value))
+				{
+					this.OntypeIDChanging(value);
+					this.SendPropertyChanging();
+					this._typeID = value;
+					this.SendPropertyChanged("typeID");
+					this.OntypeIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_typeName", DbType="NVarChar(50)")]
+		public string typeName
+		{
+			get
+			{
+				return this._typeName;
+			}
+			set
+			{
+				if ((this._typeName != value))
+				{
+					this.OntypeNameChanging(value);
+					this.SendPropertyChanging();
+					this._typeName = value;
+					this.SendPropertyChanged("typeName");
+					this.OntypeNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_quantity", DbType="Int")]
+		public System.Nullable<int> quantity
+		{
+			get
+			{
+				return this._quantity;
+			}
+			set
+			{
+				if ((this._quantity != value))
+				{
+					this.OnquantityChanging(value);
+					this.SendPropertyChanging();
+					this._quantity = value;
+					this.SendPropertyChanged("quantity");
+					this.OnquantityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TypePhone_Telephone", Storage="_Telephones", ThisKey="typeID", OtherKey="typeID")]
+		public EntitySet<Telephone> Telephones
+		{
+			get
+			{
+				return this._Telephones;
+			}
+			set
+			{
+				this._Telephones.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TypePhone_WareHouse", Storage="_WareHouses", ThisKey="typeID", OtherKey="typeID")]
+		public EntitySet<WareHouse> WareHouses
+		{
+			get
+			{
+				return this._WareHouses;
+			}
+			set
+			{
+				this._WareHouses.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Telephones(Telephone entity)
+		{
+			this.SendPropertyChanging();
+			entity.TypePhone = this;
+		}
+		
+		private void detach_Telephones(Telephone entity)
+		{
+			this.SendPropertyChanging();
+			entity.TypePhone = null;
+		}
+		
+		private void attach_WareHouses(WareHouse entity)
+		{
+			this.SendPropertyChanging();
+			entity.TypePhone = this;
+		}
+		
+		private void detach_WareHouses(WareHouse entity)
+		{
+			this.SendPropertyChanging();
+			entity.TypePhone = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Employee")]
+	public partial class Employee : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _empID;
+		
+		private string _name;
+		
+		private string _address;
+		
+		private string _phone;
+		
+		private string _state;
+		
+		private System.Nullable<int> _accID;
+		
+		private EntitySet<Order> _Orders;
+		
+		private EntityRef<Account> _Account;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnempIDChanging(int value);
+    partial void OnempIDChanged();
+    partial void OnnameChanging(string value);
+    partial void OnnameChanged();
+    partial void OnaddressChanging(string value);
+    partial void OnaddressChanged();
+    partial void OnphoneChanging(string value);
+    partial void OnphoneChanged();
+    partial void OnstateChanging(string value);
+    partial void OnstateChanged();
+    partial void OnaccIDChanging(System.Nullable<int> value);
+    partial void OnaccIDChanged();
+    #endregion
+		
+		public Employee()
+		{
+			this._Orders = new EntitySet<Order>(new Action<Order>(this.attach_Orders), new Action<Order>(this.detach_Orders));
+			this._Account = default(EntityRef<Account>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_empID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int empID
+		{
+			get
+			{
+				return this._empID;
+			}
+			set
+			{
+				if ((this._empID != value))
+				{
+					this.OnempIDChanging(value);
+					this.SendPropertyChanging();
+					this._empID = value;
+					this.SendPropertyChanged("empID");
+					this.OnempIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(50)")]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this.OnnameChanging(value);
+					this.SendPropertyChanging();
+					this._name = value;
+					this.SendPropertyChanged("name");
+					this.OnnameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_address", DbType="NVarChar(50)")]
+		public string address
+		{
+			get
+			{
+				return this._address;
+			}
+			set
+			{
+				if ((this._address != value))
+				{
+					this.OnaddressChanging(value);
+					this.SendPropertyChanging();
+					this._address = value;
+					this.SendPropertyChanged("address");
+					this.OnaddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phone", DbType="NChar(10)")]
+		public string phone
+		{
+			get
+			{
+				return this._phone;
+			}
+			set
+			{
+				if ((this._phone != value))
+				{
+					this.OnphoneChanging(value);
+					this.SendPropertyChanging();
+					this._phone = value;
+					this.SendPropertyChanged("phone");
+					this.OnphoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_state", DbType="NChar(10)")]
+		public string state
+		{
+			get
+			{
+				return this._state;
+			}
+			set
+			{
+				if ((this._state != value))
+				{
+					this.OnstateChanging(value);
+					this.SendPropertyChanging();
+					this._state = value;
+					this.SendPropertyChanged("state");
+					this.OnstateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_accID", DbType="Int")]
+		public System.Nullable<int> accID
+		{
+			get
+			{
+				return this._accID;
+			}
+			set
+			{
+				if ((this._accID != value))
+				{
+					if (this._Account.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnaccIDChanging(value);
+					this.SendPropertyChanging();
+					this._accID = value;
+					this.SendPropertyChanged("accID");
+					this.OnaccIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Order", Storage="_Orders", ThisKey="empID", OtherKey="empID")]
+		public EntitySet<Order> Orders
+		{
+			get
+			{
+				return this._Orders;
+			}
+			set
+			{
+				this._Orders.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Account_Employee", Storage="_Account", ThisKey="accID", OtherKey="accID", IsForeignKey=true)]
+		public Account Account
+		{
+			get
+			{
+				return this._Account.Entity;
+			}
+			set
+			{
+				Account previousValue = this._Account.Entity;
+				if (((previousValue != value) 
+							|| (this._Account.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Account.Entity = null;
+						previousValue.Employees.Remove(this);
+					}
+					this._Account.Entity = value;
+					if ((value != null))
+					{
+						value.Employees.Add(this);
+						this._accID = value.accID;
+					}
+					else
+					{
+						this._accID = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Account");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Orders(Order entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee = this;
+		}
+		
+		private void detach_Orders(Order entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[Order]")]
+	public partial class Order : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _orderID;
+		
+		private System.Nullable<double> _total;
+		
+		private string _cusName;
+		
+		private System.Nullable<System.DateTime> _orderDate;
+		
+		private string _state;
+		
+		private string _empName;
+		
+		private System.Nullable<int> _empID;
+		
+		private EntitySet<OrderDetail> _OrderDetails;
+		
+		private EntityRef<Employee> _Employee;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnorderIDChanging(int value);
+    partial void OnorderIDChanged();
+    partial void OntotalChanging(System.Nullable<double> value);
+    partial void OntotalChanged();
+    partial void OncusNameChanging(string value);
+    partial void OncusNameChanged();
+    partial void OnorderDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnorderDateChanged();
+    partial void OnstateChanging(string value);
+    partial void OnstateChanged();
+    partial void OnempNameChanging(string value);
+    partial void OnempNameChanged();
+    partial void OnempIDChanging(System.Nullable<int> value);
+    partial void OnempIDChanged();
+    #endregion
+		
+		public Order()
+		{
+			this._OrderDetails = new EntitySet<OrderDetail>(new Action<OrderDetail>(this.attach_OrderDetails), new Action<OrderDetail>(this.detach_OrderDetails));
+			this._Employee = default(EntityRef<Employee>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_orderID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int orderID
+		{
+			get
+			{
+				return this._orderID;
+			}
+			set
+			{
+				if ((this._orderID != value))
+				{
+					this.OnorderIDChanging(value);
+					this.SendPropertyChanging();
+					this._orderID = value;
+					this.SendPropertyChanged("orderID");
+					this.OnorderIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_total", DbType="Float")]
+		public System.Nullable<double> total
+		{
+			get
+			{
+				return this._total;
+			}
+			set
+			{
+				if ((this._total != value))
+				{
+					this.OntotalChanging(value);
+					this.SendPropertyChanging();
+					this._total = value;
+					this.SendPropertyChanged("total");
+					this.OntotalChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cusName", DbType="NVarChar(50)")]
+		public string cusName
+		{
+			get
+			{
+				return this._cusName;
+			}
+			set
+			{
+				if ((this._cusName != value))
+				{
+					this.OncusNameChanging(value);
+					this.SendPropertyChanging();
+					this._cusName = value;
+					this.SendPropertyChanged("cusName");
+					this.OncusNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_orderDate", DbType="Date")]
+		public System.Nullable<System.DateTime> orderDate
+		{
+			get
+			{
+				return this._orderDate;
+			}
+			set
+			{
+				if ((this._orderDate != value))
+				{
+					this.OnorderDateChanging(value);
+					this.SendPropertyChanging();
+					this._orderDate = value;
+					this.SendPropertyChanged("orderDate");
+					this.OnorderDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_state", DbType="NChar(10)")]
+		public string state
+		{
+			get
+			{
+				return this._state;
+			}
+			set
+			{
+				if ((this._state != value))
+				{
+					this.OnstateChanging(value);
+					this.SendPropertyChanging();
+					this._state = value;
+					this.SendPropertyChanged("state");
+					this.OnstateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_empName", DbType="NChar(10)")]
+		public string empName
+		{
+			get
+			{
+				return this._empName;
+			}
+			set
+			{
+				if ((this._empName != value))
+				{
+					this.OnempNameChanging(value);
+					this.SendPropertyChanging();
+					this._empName = value;
+					this.SendPropertyChanged("empName");
+					this.OnempNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_empID", DbType="Int")]
+		public System.Nullable<int> empID
+		{
+			get
+			{
+				return this._empID;
+			}
+			set
+			{
+				if ((this._empID != value))
+				{
+					if (this._Employee.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnempIDChanging(value);
+					this.SendPropertyChanging();
+					this._empID = value;
+					this.SendPropertyChanged("empID");
+					this.OnempIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Order_OrderDetail", Storage="_OrderDetails", ThisKey="orderID", OtherKey="orderID")]
+		public EntitySet<OrderDetail> OrderDetails
+		{
+			get
+			{
+				return this._OrderDetails;
+			}
+			set
+			{
+				this._OrderDetails.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Order", Storage="_Employee", ThisKey="empID", OtherKey="empID", IsForeignKey=true)]
+		public Employee Employee
+		{
+			get
+			{
+				return this._Employee.Entity;
+			}
+			set
+			{
+				Employee previousValue = this._Employee.Entity;
+				if (((previousValue != value) 
+							|| (this._Employee.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Employee.Entity = null;
+						previousValue.Orders.Remove(this);
+					}
+					this._Employee.Entity = value;
+					if ((value != null))
+					{
+						value.Orders.Add(this);
+						this._empID = value.empID;
+					}
+					else
+					{
+						this._empID = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Employee");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_OrderDetails(OrderDetail entity)
+		{
+			this.SendPropertyChanging();
+			entity.Order = this;
+		}
+		
+		private void detach_OrderDetails(OrderDetail entity)
+		{
+			this.SendPropertyChanging();
+			entity.Order = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OrderDetail")]
+	public partial class OrderDetail : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _detailID;
+		
+		private System.Nullable<int> _quantity;
+		
+		private System.Nullable<double> _unitprice;
+		
+		private System.Nullable<double> _amount;
+		
+		private System.Nullable<int> _orderID;
+		
+		private System.Nullable<int> _teleID;
+		
+		private EntityRef<Order> _Order;
+		
+		private EntityRef<Telephone> _Telephone;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OndetailIDChanging(int value);
+    partial void OndetailIDChanged();
+    partial void OnquantityChanging(System.Nullable<int> value);
+    partial void OnquantityChanged();
+    partial void OnunitpriceChanging(System.Nullable<double> value);
+    partial void OnunitpriceChanged();
+    partial void OnamountChanging(System.Nullable<double> value);
+    partial void OnamountChanged();
+    partial void OnorderIDChanging(System.Nullable<int> value);
+    partial void OnorderIDChanged();
+    partial void OnteleIDChanging(System.Nullable<int> value);
+    partial void OnteleIDChanged();
+    #endregion
+		
+		public OrderDetail()
+		{
+			this._Order = default(EntityRef<Order>);
+			this._Telephone = default(EntityRef<Telephone>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_detailID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int detailID
+		{
+			get
+			{
+				return this._detailID;
+			}
+			set
+			{
+				if ((this._detailID != value))
+				{
+					this.OndetailIDChanging(value);
+					this.SendPropertyChanging();
+					this._detailID = value;
+					this.SendPropertyChanged("detailID");
+					this.OndetailIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_quantity", DbType="Int")]
+		public System.Nullable<int> quantity
+		{
+			get
+			{
+				return this._quantity;
+			}
+			set
+			{
+				if ((this._quantity != value))
+				{
+					this.OnquantityChanging(value);
+					this.SendPropertyChanging();
+					this._quantity = value;
+					this.SendPropertyChanged("quantity");
+					this.OnquantityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_unitprice", DbType="Float")]
+		public System.Nullable<double> unitprice
+		{
+			get
+			{
+				return this._unitprice;
+			}
+			set
+			{
+				if ((this._unitprice != value))
+				{
+					this.OnunitpriceChanging(value);
+					this.SendPropertyChanging();
+					this._unitprice = value;
+					this.SendPropertyChanged("unitprice");
+					this.OnunitpriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_amount", DbType="Float")]
+		public System.Nullable<double> amount
+		{
+			get
+			{
+				return this._amount;
+			}
+			set
+			{
+				if ((this._amount != value))
+				{
+					this.OnamountChanging(value);
+					this.SendPropertyChanging();
+					this._amount = value;
+					this.SendPropertyChanged("amount");
+					this.OnamountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_orderID", DbType="Int")]
+		public System.Nullable<int> orderID
+		{
+			get
+			{
+				return this._orderID;
+			}
+			set
+			{
+				if ((this._orderID != value))
+				{
+					if (this._Order.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnorderIDChanging(value);
+					this.SendPropertyChanging();
+					this._orderID = value;
+					this.SendPropertyChanged("orderID");
+					this.OnorderIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_teleID", DbType="Int")]
+		public System.Nullable<int> teleID
+		{
+			get
+			{
+				return this._teleID;
+			}
+			set
+			{
+				if ((this._teleID != value))
+				{
+					if (this._Telephone.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnteleIDChanging(value);
+					this.SendPropertyChanging();
+					this._teleID = value;
+					this.SendPropertyChanged("teleID");
+					this.OnteleIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Order_OrderDetail", Storage="_Order", ThisKey="orderID", OtherKey="orderID", IsForeignKey=true)]
+		public Order Order
+		{
+			get
+			{
+				return this._Order.Entity;
+			}
+			set
+			{
+				Order previousValue = this._Order.Entity;
+				if (((previousValue != value) 
+							|| (this._Order.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Order.Entity = null;
+						previousValue.OrderDetails.Remove(this);
+					}
+					this._Order.Entity = value;
+					if ((value != null))
+					{
+						value.OrderDetails.Add(this);
+						this._orderID = value.orderID;
+					}
+					else
+					{
+						this._orderID = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Order");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Telephone_OrderDetail", Storage="_Telephone", ThisKey="teleID", OtherKey="teleID", IsForeignKey=true)]
+		public Telephone Telephone
+		{
+			get
+			{
+				return this._Telephone.Entity;
+			}
+			set
+			{
+				Telephone previousValue = this._Telephone.Entity;
+				if (((previousValue != value) 
+							|| (this._Telephone.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Telephone.Entity = null;
+						previousValue.OrderDetails.Remove(this);
+					}
+					this._Telephone.Entity = value;
+					if ((value != null))
+					{
+						value.OrderDetails.Add(this);
+						this._teleID = value.teleID;
+					}
+					else
+					{
+						this._teleID = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Telephone");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Telephone")]
+	public partial class Telephone : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _teleID;
+		
+		private string _name;
+		
+		private System.Nullable<double> _price;
+		
+		private string _provider;
+		
+		private string _state;
+		
+		private System.Nullable<int> _typeID;
+		
+		private EntitySet<OrderDetail> _OrderDetails;
+		
+		private EntityRef<TypePhone> _TypePhone;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnteleIDChanging(int value);
+    partial void OnteleIDChanged();
+    partial void OnnameChanging(string value);
+    partial void OnnameChanged();
+    partial void OnpriceChanging(System.Nullable<double> value);
+    partial void OnpriceChanged();
+    partial void OnproviderChanging(string value);
+    partial void OnproviderChanged();
+    partial void OnstateChanging(string value);
+    partial void OnstateChanged();
+    partial void OntypeIDChanging(System.Nullable<int> value);
+    partial void OntypeIDChanged();
+    #endregion
+		
+		public Telephone()
+		{
+			this._OrderDetails = new EntitySet<OrderDetail>(new Action<OrderDetail>(this.attach_OrderDetails), new Action<OrderDetail>(this.detach_OrderDetails));
+			this._TypePhone = default(EntityRef<TypePhone>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_teleID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int teleID
+		{
+			get
+			{
+				return this._teleID;
+			}
+			set
+			{
+				if ((this._teleID != value))
+				{
+					this.OnteleIDChanging(value);
+					this.SendPropertyChanging();
+					this._teleID = value;
+					this.SendPropertyChanged("teleID");
+					this.OnteleIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(50)")]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this.OnnameChanging(value);
+					this.SendPropertyChanging();
+					this._name = value;
+					this.SendPropertyChanged("name");
+					this.OnnameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_price", DbType="Float")]
+		public System.Nullable<double> price
+		{
+			get
+			{
+				return this._price;
+			}
+			set
+			{
+				if ((this._price != value))
+				{
+					this.OnpriceChanging(value);
+					this.SendPropertyChanging();
+					this._price = value;
+					this.SendPropertyChanged("price");
+					this.OnpriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_provider", DbType="NChar(10)")]
+		public string provider
+		{
+			get
+			{
+				return this._provider;
+			}
+			set
+			{
+				if ((this._provider != value))
+				{
+					this.OnproviderChanging(value);
+					this.SendPropertyChanging();
+					this._provider = value;
+					this.SendPropertyChanged("provider");
+					this.OnproviderChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_state", DbType="NChar(10)")]
+		public string state
+		{
+			get
+			{
+				return this._state;
+			}
+			set
+			{
+				if ((this._state != value))
+				{
+					this.OnstateChanging(value);
+					this.SendPropertyChanging();
+					this._state = value;
+					this.SendPropertyChanged("state");
+					this.OnstateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_typeID", DbType="Int")]
+		public System.Nullable<int> typeID
+		{
+			get
+			{
+				return this._typeID;
+			}
+			set
+			{
+				if ((this._typeID != value))
+				{
+					if (this._TypePhone.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OntypeIDChanging(value);
+					this.SendPropertyChanging();
+					this._typeID = value;
+					this.SendPropertyChanged("typeID");
+					this.OntypeIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Telephone_OrderDetail", Storage="_OrderDetails", ThisKey="teleID", OtherKey="teleID")]
+		public EntitySet<OrderDetail> OrderDetails
+		{
+			get
+			{
+				return this._OrderDetails;
+			}
+			set
+			{
+				this._OrderDetails.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TypePhone_Telephone", Storage="_TypePhone", ThisKey="typeID", OtherKey="typeID", IsForeignKey=true)]
+		public TypePhone TypePhone
+		{
+			get
+			{
+				return this._TypePhone.Entity;
+			}
+			set
+			{
+				TypePhone previousValue = this._TypePhone.Entity;
+				if (((previousValue != value) 
+							|| (this._TypePhone.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TypePhone.Entity = null;
+						previousValue.Telephones.Remove(this);
+					}
+					this._TypePhone.Entity = value;
+					if ((value != null))
+					{
+						value.Telephones.Add(this);
+						this._typeID = value.typeID;
+					}
+					else
+					{
+						this._typeID = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("TypePhone");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_OrderDetails(OrderDetail entity)
+		{
+			this.SendPropertyChanging();
+			entity.Telephone = this;
+		}
+		
+		private void detach_OrderDetails(OrderDetail entity)
+		{
+			this.SendPropertyChanging();
+			entity.Telephone = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.WareHouse")]
+	public partial class WareHouse : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _wareID;
+		
+		private string _wareName;
+		
+		private string _address;
+		
+		private System.Nullable<int> _typeID;
+		
+		private EntityRef<TypePhone> _TypePhone;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnwareIDChanging(int value);
+    partial void OnwareIDChanged();
+    partial void OnwareNameChanging(string value);
+    partial void OnwareNameChanged();
+    partial void OnaddressChanging(string value);
+    partial void OnaddressChanged();
+    partial void OntypeIDChanging(System.Nullable<int> value);
+    partial void OntypeIDChanged();
+    #endregion
+		
+		public WareHouse()
+		{
+			this._TypePhone = default(EntityRef<TypePhone>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_wareID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int wareID
+		{
+			get
+			{
+				return this._wareID;
+			}
+			set
+			{
+				if ((this._wareID != value))
+				{
+					this.OnwareIDChanging(value);
+					this.SendPropertyChanging();
+					this._wareID = value;
+					this.SendPropertyChanged("wareID");
+					this.OnwareIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_wareName", DbType="NVarChar(50)")]
+		public string wareName
+		{
+			get
+			{
+				return this._wareName;
+			}
+			set
+			{
+				if ((this._wareName != value))
+				{
+					this.OnwareNameChanging(value);
+					this.SendPropertyChanging();
+					this._wareName = value;
+					this.SendPropertyChanged("wareName");
+					this.OnwareNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_address", DbType="NVarChar(50)")]
+		public string address
+		{
+			get
+			{
+				return this._address;
+			}
+			set
+			{
+				if ((this._address != value))
+				{
+					this.OnaddressChanging(value);
+					this.SendPropertyChanging();
+					this._address = value;
+					this.SendPropertyChanged("address");
+					this.OnaddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_typeID", DbType="Int")]
+		public System.Nullable<int> typeID
+		{
+			get
+			{
+				return this._typeID;
+			}
+			set
+			{
+				if ((this._typeID != value))
+				{
+					if (this._TypePhone.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OntypeIDChanging(value);
+					this.SendPropertyChanging();
+					this._typeID = value;
+					this.SendPropertyChanged("typeID");
+					this.OntypeIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TypePhone_WareHouse", Storage="_TypePhone", ThisKey="typeID", OtherKey="typeID", IsForeignKey=true)]
+		public TypePhone TypePhone
+		{
+			get
+			{
+				return this._TypePhone.Entity;
+			}
+			set
+			{
+				TypePhone previousValue = this._TypePhone.Entity;
+				if (((previousValue != value) 
+							|| (this._TypePhone.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TypePhone.Entity = null;
+						previousValue.WareHouses.Remove(this);
+					}
+					this._TypePhone.Entity = value;
+					if ((value != null))
+					{
+						value.WareHouses.Add(this);
+						this._typeID = value.typeID;
+					}
+					else
+					{
+						this._typeID = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("TypePhone");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 }
