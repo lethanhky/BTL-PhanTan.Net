@@ -5,3 +5,6 @@ D:\PhanTan\BTL_PhanTan\QLDTDD\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
 D:\PhanTan\BTL_PhanTan\QLDTDD\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\PhanTan\BTL_PhanTan\QLDTDD\DAL\obj\Debug\DAL.dll
 D:\PhanTan\BTL_PhanTan\QLDTDD\DAL\obj\Debug\DAL.pdb
+D:\PhanTan\BTL_PhanTan\QLDTDD\DAL\bin\Debug\Entities.dll
+D:\PhanTan\BTL_PhanTan\QLDTDD\DAL\bin\Debug\Entities.pdb
+D:\PhanTan\BTL_PhanTan\QLDTDD\DAL\obj\Debug\DAL.csproj.CopyComplete

@@ -8,7 +8,7 @@ using Entities;
 
 namespace DAL
 {
-    class TelephoneDAL
+    public class TelephoneDAL
     {
         QLDTDDDataContext db;
         public TelephoneDAL()
@@ -98,22 +98,32 @@ namespace DAL
                 return true;
             return false;
         }
-        public int insertTelephone(Telephone tele) // them dien thoai moi
+        public int insertTelephone(eTelephone tele) // them dien thoai moi
         {
-            if (checkIfExist(tele.teleID))
+            if (checkIfExist(tele.TeleID))
                 return 0;
             Telephone t = new Telephone();
 
-            t.teleID = tele.teleID;
-            t.name = tele.name;
-            t.price = tele.price;
-            t.provider = tele.provider;
-            t.state = tele.state;
-            t.typeID = tele.typeID;
+            t.teleID = tele.TeleID;
+            t.name = tele.Name;
+            t.price = tele.Price;
+            t.provider = tele.Provider;
+            t.state = tele.State;
+            t.typeID = tele.TypeID;
 
             db.Telephones.InsertOnSubmit(t);
             db.SubmitChanges();
             return 1;
+        }
+        public void EditTelephone(eTelephone teleold) // Chinh sua thong tin nhan vien
+        {
+            IQueryable<Telephone> tele = db.Telephones.Where(x => x.teleID == teleold.TeleID);
+            tele.First().name = teleold.Name;
+            tele.First().price = teleold.Price;
+            tele.First().provider = teleold.Provider;
+            tele.First().state = teleold.State;
+            tele.First().typeID = (int)teleold.TypeID;
+            db.SubmitChanges();
         }
     }
 }
