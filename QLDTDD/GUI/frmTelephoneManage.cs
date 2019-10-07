@@ -15,7 +15,6 @@ namespace GUI
     public partial class frmTelephoneManage : Form
     {
         List<eTelephone> listTele;
-        TypePhoneBUS tpBus;
         TelephoneBUS teleBus;
         public frmTelephoneManage()
         {
@@ -24,7 +23,6 @@ namespace GUI
 
         private void frmTelephoneManage_Load(object sender, EventArgs e)
         {
-            tpBus = new TypePhoneBUS();
             teleBus = new TelephoneBUS();   
             // TODO: This line of code loads data into the 'qLDTDDDataSet.Telephone' table. You can move, or remove it, as needed.
             this.telephoneTableAdapter.Fill(this.qLDTDDDataSet.Telephone);

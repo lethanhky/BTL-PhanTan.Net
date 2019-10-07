@@ -8,13 +8,18 @@
       <Association Name="Account_Employee" Member="Employees" ThisKey="accID" OtherKey="accID" Type="Employee" />
     </Type>
   </Table>
-  <Table Name="dbo.TypePhone" Member="TypePhones">
-    <Type Name="TypePhone">
-      <Column Name="typeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="typeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+  <Table Name="dbo.Telephone" Member="Telephones">
+    <Type Name="Telephone">
+      <Column Name="teleID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="impdetaiID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
       <Column Name="quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="TypePhone_Telephone" Member="Telephones" ThisKey="typeID" OtherKey="typeID" Type="Telephone" />
-      <Association Name="TypePhone_WareHouse" Member="WareHouses" ThisKey="typeID" OtherKey="typeID" Type="WareHouse" />
+      <Column Name="provider" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="state" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="[&#xD;&#xA;&#x9;[typeID]" Member="____typeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Telephone_OrderDetail" Member="OrderDetails" ThisKey="teleID" OtherKey="teleID" Type="OrderDetail" />
+      <Association Name="ImportCouponDetail_Telephone" Member="ImportCouponDetail" ThisKey="impdetaiID" OtherKey="impdetaiID" Type="ImportCouponDetail" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Employee" Member="Employees">
@@ -24,15 +29,38 @@
       <Column Name="address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="phone" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
       <Column Name="state" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="position" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
       <Column Name="accID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Employee_ImportCoupon" Member="ImportCoupons" ThisKey="empID" OtherKey="empID" Type="ImportCoupon" />
       <Association Name="Employee_Order" Member="Orders" ThisKey="empID" OtherKey="empID" Type="Order" />
       <Association Name="Account_Employee" Member="Account" ThisKey="accID" OtherKey="accID" Type="Account" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ImportCoupon" Member="ImportCoupons">
+    <Type Name="ImportCoupon">
+      <Column Name="impID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="impdetailDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="empID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="ImportCoupon_ImportCouponDetail" Member="ImportCouponDetails" ThisKey="impID" OtherKey="impID" Type="ImportCouponDetail" />
+      <Association Name="Employee_ImportCoupon" Member="Employee" ThisKey="empID" OtherKey="empID" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ImportCouponDetail" Member="ImportCouponDetails">
+    <Type Name="ImportCouponDetail">
+      <Column Name="impdetaiID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="impID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ImportCouponDetail_Telephone" Member="Telephones" ThisKey="impdetaiID" OtherKey="impdetaiID" Type="Telephone" />
+      <Association Name="ImportCoupon_ImportCouponDetail" Member="ImportCoupon" ThisKey="impID" OtherKey="impID" Type="ImportCoupon" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.[Order]" Member="Orders">
     <Type Name="Order">
       <Column Name="orderID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="total" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
       <Column Name="cusName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="orderDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="state" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
@@ -45,34 +73,12 @@
   <Table Name="dbo.OrderDetail" Member="OrderDetails">
     <Type Name="OrderDetail">
       <Column Name="detailID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="unitprice" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="amount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="unitprice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="amount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
       <Column Name="orderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="teleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Order_OrderDetail" Member="Order" ThisKey="orderID" OtherKey="orderID" Type="Order" IsForeignKey="true" />
       <Association Name="Telephone_OrderDetail" Member="Telephone" ThisKey="teleID" OtherKey="teleID" Type="Telephone" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Telephone" Member="Telephones">
-    <Type Name="Telephone">
-      <Column Name="teleID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="price" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="provider" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="state" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="typeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Telephone_OrderDetail" Member="OrderDetails" ThisKey="teleID" OtherKey="teleID" Type="OrderDetail" />
-      <Association Name="TypePhone_Telephone" Member="TypePhone" ThisKey="typeID" OtherKey="typeID" Type="TypePhone" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.WareHouse" Member="WareHouses">
-    <Type Name="WareHouse">
-      <Column Name="wareID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="wareName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="typeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="TypePhone_WareHouse" Member="TypePhone" ThisKey="typeID" OtherKey="typeID" Type="TypePhone" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

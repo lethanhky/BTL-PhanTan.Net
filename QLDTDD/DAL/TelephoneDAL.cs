@@ -27,29 +27,29 @@ namespace DAL
                 te.Price = double.Parse(t.price.ToString());
                 te.Provider = t.provider;
                 te.State = t.state;
-                te.TypeID = int.Parse(t.typeID.ToString());
                 lt.Add(te);
             }
             return lt;
         }
-
-        public List<eTelephone> getTelephoneByTypeID(int typeid) //lay danh sach dt theo ma loai
-        {
-            var listTele = db.Telephones.Where(x => x.typeID == typeid).ToList();
-            List<eTelephone> lt = new List<eTelephone>();
-            foreach(Telephone t in listTele)
-            {
-                eTelephone te = new eTelephone();
-                te.TeleID = t.teleID;
-                te.Name = t.name;
-                te.Price = double.Parse(t.price.ToString());
-                te.Provider = t.provider;
-                te.State = t.state;
-                te.TypeID = int.Parse(t.typeID.ToString());
-                lt.Add(te);
-            }
-            return lt;
-        }
+        #region
+        //public List<eTelephone> getTelephoneByTypeID(int typeid) //lay danh sach dt theo ma loai
+        //{
+        //    var listTele = db.Telephones.Where(x => x.typeID == typeid).ToList();
+        //    List<eTelephone> lt = new List<eTelephone>();
+        //    foreach(Telephone t in listTele)
+        //    {
+        //        eTelephone te = new eTelephone();
+        //        te.TeleID = t.teleID;
+        //        te.Name = t.name;
+        //        te.Price = double.Parse(t.price.ToString());
+        //        te.Provider = t.provider;
+        //        te.State = t.state;
+        //        te.TypeID = int.Parse(t.typeID.ToString());
+        //        lt.Add(te);
+        //    }
+        //    return lt;
+        //}
+        #endregion
         private string ConvertToUnSign(string input) // convert tu khoa tim kiem
         {
             input = input.Trim();
@@ -71,7 +71,7 @@ namespace DAL
         {
             var listTele = db.Telephones.Where(delegate (Telephone c)
             {
-                if (ConvertToUnSign(c.teleID + c.name + c.price + c.provider + c.state + c.typeID).IndexOf(input, StringComparison.CurrentCultureIgnoreCase) >= 0)
+                if (ConvertToUnSign(c.teleID + c.name + c.price + c.provider + c.state).IndexOf(input, StringComparison.CurrentCultureIgnoreCase) >= 0)
                     return true;
                 else
                     return false;
@@ -86,7 +86,6 @@ namespace DAL
                 te.Price = double.Parse(t.price.ToString());
                 te.Provider = t.provider;
                 te.State = t.state;
-                te.TypeID = int.Parse(t.typeID.ToString());
                 lt.Add(te);
             }
             return lt;
@@ -106,10 +105,9 @@ namespace DAL
 
             t.teleID = tele.TeleID;
             t.name = tele.Name;
-            t.price = tele.Price;
+            t.price = decimal.Parse(tele.Price.ToString());
             t.provider = tele.Provider;
             t.state = tele.State;
-            t.typeID = tele.TypeID;
 
             db.Telephones.InsertOnSubmit(t);
             db.SubmitChanges();
@@ -119,10 +117,9 @@ namespace DAL
         {
             IQueryable<Telephone> tele = db.Telephones.Where(x => x.teleID == teleold.TeleID);
             tele.First().name = teleold.Name;
-            tele.First().price = teleold.Price;
+            tele.First().price = (decimal)teleold.Price;
             tele.First().provider = teleold.Provider;
             tele.First().state = teleold.State;
-            tele.First().typeID = (int)teleold.TypeID;
             db.SubmitChanges();
         }
     }

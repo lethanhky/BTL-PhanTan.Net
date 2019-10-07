@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    class TypePhoneDAL
+    public class ImportCouponDAL
     {
     }
 }
