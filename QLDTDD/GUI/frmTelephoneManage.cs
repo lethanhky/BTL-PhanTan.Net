@@ -23,6 +23,8 @@ namespace GUI
 
         private void frmTelephoneManage_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'qLDTDDDataSet1.Telephone' table. You can move, or remove it, as needed.
+            this.telephoneTableAdapter.Fill(this.qLDTDDDataSet1.Telephone);
             teleBus = new TelephoneBUS();   
             // TODO: This line of code loads data into the 'qLDTDDDataSet.Telephone' table. You can move, or remove it, as needed.
             this.telephoneTableAdapter.Fill(this.qLDTDDDataSet.Telephone);

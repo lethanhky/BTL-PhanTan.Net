@@ -43,12 +43,12 @@
   <ItemGroup>
     <Compile Include="AccountBUS.cs" />
     <Compile Include="EmployeeBUS.cs" />
+    <Compile Include="ImportCouponBUS.cs" />
+    <Compile Include="ImportCouponDetailBUS.cs" />
     <Compile Include="OrderBUS.cs" />
     <Compile Include="OrderDetailBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TelephoneBUS.cs" />
-    <Compile Include="TypePhoneBUS.cs" />
-    <Compile Include="WareHouseBUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

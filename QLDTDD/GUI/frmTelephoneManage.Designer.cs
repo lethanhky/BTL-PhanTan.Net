@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.teleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.providerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telephoneBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLDTDDDataSet = new GUI.QLDTDDDataSet();
             this.telephoneTableAdapter = new GUI.QLDTDDDataSetTableAdapters.TelephoneTableAdapter();
@@ -58,66 +51,25 @@
             this.txtteleID = new System.Windows.Forms.TextBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.qLDTDDDataSet1 = new GUI.QLDTDDDataSet();
+            this.telephoneBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.teleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.impdetaiIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.providerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.telephoneBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLDTDDDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLDTDDDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.telephoneBindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.teleIDDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn,
-            this.providerDataGridViewTextBoxColumn,
-            this.stateDataGridViewTextBoxColumn,
-            this.typeIDDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.telephoneBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(449, 308);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // teleIDDataGridViewTextBoxColumn
-            // 
-            this.teleIDDataGridViewTextBoxColumn.DataPropertyName = "teleID";
-            this.teleIDDataGridViewTextBoxColumn.HeaderText = "teleID";
-            this.teleIDDataGridViewTextBoxColumn.Name = "teleIDDataGridViewTextBoxColumn";
-            this.teleIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            // 
-            // providerDataGridViewTextBoxColumn
-            // 
-            this.providerDataGridViewTextBoxColumn.DataPropertyName = "provider";
-            this.providerDataGridViewTextBoxColumn.HeaderText = "provider";
-            this.providerDataGridViewTextBoxColumn.Name = "providerDataGridViewTextBoxColumn";
-            // 
-            // stateDataGridViewTextBoxColumn
-            // 
-            this.stateDataGridViewTextBoxColumn.DataPropertyName = "state";
-            this.stateDataGridViewTextBoxColumn.HeaderText = "state";
-            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
-            // 
-            // typeIDDataGridViewTextBoxColumn
-            // 
-            this.typeIDDataGridViewTextBoxColumn.DataPropertyName = "typeID";
-            this.typeIDDataGridViewTextBoxColumn.HeaderText = "typeID";
-            this.typeIDDataGridViewTextBoxColumn.Name = "typeIDDataGridViewTextBoxColumn";
             // 
             // telephoneBindingSource
             // 
@@ -309,6 +261,85 @@
             this.btnSearch.Text = "button1";
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.teleIDDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.impdetaiIDDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn,
+            this.quantityDataGridViewTextBoxColumn,
+            this.providerDataGridViewTextBoxColumn,
+            this.stateDataGridViewTextBoxColumn,
+            this.typeIDDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.telephoneBindingSource1;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(455, 308);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // qLDTDDDataSet1
+            // 
+            this.qLDTDDDataSet1.DataSetName = "QLDTDDDataSet";
+            this.qLDTDDDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // telephoneBindingSource1
+            // 
+            this.telephoneBindingSource1.DataMember = "Telephone";
+            this.telephoneBindingSource1.DataSource = this.qLDTDDDataSet1;
+            // 
+            // teleIDDataGridViewTextBoxColumn
+            // 
+            this.teleIDDataGridViewTextBoxColumn.DataPropertyName = "teleID";
+            this.teleIDDataGridViewTextBoxColumn.HeaderText = "teleID";
+            this.teleIDDataGridViewTextBoxColumn.Name = "teleIDDataGridViewTextBoxColumn";
+            this.teleIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // impdetaiIDDataGridViewTextBoxColumn
+            // 
+            this.impdetaiIDDataGridViewTextBoxColumn.DataPropertyName = "impdetaiID";
+            this.impdetaiIDDataGridViewTextBoxColumn.HeaderText = "impdetaiID";
+            this.impdetaiIDDataGridViewTextBoxColumn.Name = "impdetaiIDDataGridViewTextBoxColumn";
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "quantity";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            // 
+            // providerDataGridViewTextBoxColumn
+            // 
+            this.providerDataGridViewTextBoxColumn.DataPropertyName = "provider";
+            this.providerDataGridViewTextBoxColumn.HeaderText = "provider";
+            this.providerDataGridViewTextBoxColumn.Name = "providerDataGridViewTextBoxColumn";
+            // 
+            // stateDataGridViewTextBoxColumn
+            // 
+            this.stateDataGridViewTextBoxColumn.DataPropertyName = "state";
+            this.stateDataGridViewTextBoxColumn.HeaderText = "state";
+            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
+            // 
+            // typeIDDataGridViewTextBoxColumn
+            // 
+            this.typeIDDataGridViewTextBoxColumn.DataPropertyName = "\r\n\t[typeID";
+            this.typeIDDataGridViewTextBoxColumn.HeaderText = "\r\n\t[typeID";
+            this.typeIDDataGridViewTextBoxColumn.Name = "typeIDDataGridViewTextBoxColumn";
+            // 
             // frmTelephoneManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,29 +352,23 @@
             this.Name = "frmTelephoneManage";
             this.Text = "frmTelephoneManage";
             this.Load += new System.EventHandler(this.frmTelephoneManage_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.telephoneBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLDTDDDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLDTDDDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.telephoneBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private QLDTDDDataSet qLDTDDDataSet;
         private System.Windows.Forms.BindingSource telephoneBindingSource;
         private QLDTDDDataSetTableAdapters.TelephoneTableAdapter telephoneTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn teleIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn providerDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnDelete;
@@ -363,5 +388,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private QLDTDDDataSet qLDTDDDataSet1;
+        private System.Windows.Forms.BindingSource telephoneBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teleIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn impdetaiIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn providerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeIDDataGridViewTextBoxColumn;
     }
 }

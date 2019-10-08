@@ -43,11 +43,11 @@
   <ItemGroup>
     <Compile Include="eAccount.cs" />
     <Compile Include="eEmployee.cs" />
+    <Compile Include="eImportCoupon.cs" />
+    <Compile Include="eImportCouponDetail.cs" />
     <Compile Include="eOrder.cs" />
     <Compile Include="eOrderDetail.cs" />
     <Compile Include="eTelephone.cs" />
-    <Compile Include="eTypePhone.cs" />
-    <Compile Include="eWareHouse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

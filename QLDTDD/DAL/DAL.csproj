@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="AccountDAL.cs" />
     <Compile Include="EmployeeDAL.cs" />
+    <Compile Include="ImportCouponDAL.cs" />
+    <Compile Include="ImportCouponDetailDAL.cs" />
     <Compile Include="OrderDAL.cs" />
     <Compile Include="OrderDetailDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,8 +60,6 @@
       <DependentUpon>QLDTDD.dbml</DependentUpon>
     </Compile>
     <Compile Include="TelephoneDAL.cs" />
-    <Compile Include="TypePhoneDAL.cs" />
-    <Compile Include="WareHouseDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
