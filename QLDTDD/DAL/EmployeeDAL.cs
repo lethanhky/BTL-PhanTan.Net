@@ -24,9 +24,10 @@ namespace DAL
                 eEmployee em = new eEmployee();
                 em.EmpID = (int)e.empID;
                 em.Name = e.name;
-                e.address = e.address;
-                e.phone = e.phone;
-                e.state = e.state;
+                em.Address = e.address;
+                em.Phone = e.phone;
+                em.State = e.state;
+                em.Position = e.position;
                 em.AccId = (int)e.accID;
                 ls.Add(em);
             }
@@ -38,32 +39,30 @@ namespace DAL
             if (em != null) return true;
             else return false;
         }
-        public int InsertEmployee(Employee newem) // them nhan vien
-        {
-            if (CheckIsExist((int)newem.empID)) return 0;
-            else
-            {
+        public void InsertEmployee(eEmployee newem) // them nhan vien
+        { 
                 Employee em = new Employee();
-                em.empID = newem.empID;
-                em.name = newem.name;
-                em.address = newem.address;
-                em.phone = newem.phone;
-                em.state = newem.state;
-                em.accID = newem.accID;
+                em.empID = newem.EmpID;
+                em.name = newem.Name;
+                em.address = newem.Address;
+                em.phone = newem.Phone;
+                em.state = newem.State;
+                em.position = newem.Position;
+                em.accID = newem.AccId;
                 db.Employees.InsertOnSubmit(em);
                 db.SubmitChanges();
-                return 1;
-            }
         }
-        public int EditEmployee(Employee emold) // Chinh sua thong tin nhan vien
+        public int EditEmployee(eEmployee emold) // Chinh sua thong tin nhan vien
         {
-            if (CheckIsExist((int)emold.empID)) return 0;
-            IQueryable<Employee> em = db.Employees.Where(x => x.empID == emold.empID);
-            em.First().name = emold.name;
-            em.First().address = emold.address;
-            em.First().phone = emold.phone;
-            em.First().state = emold.state;
-            em.First().accID = (int)emold.accID;
+            if (!CheckIsExist(emold.EmpID))
+                return 0;
+            IQueryable<Employee> em = db.Employees.Where(x => x.empID == emold.EmpID);
+            em.First().name = emold.Name;
+            em.First().address = emold.Address;
+            em.First().phone = emold.Phone;
+            em.First().state = emold.State;
+            em.First().position = emold.Position;
+            em.First().accID = (int)emold.AccId;
             db.SubmitChanges();
             return 1;
         }
@@ -71,7 +70,7 @@ namespace DAL
         {
             var nvlist = db.Employees.Where(delegate (Employee c)
             {
-                if (ConvertToUnSign(c.accID + c.name + c.address + c.phone + c.state + c.accID).IndexOf(input, StringComparison.CurrentCultureIgnoreCase) >= 0)
+                if (ConvertToUnSign(c.accID + c.name + c.address + c.phone + c.state + c.position + c.accID).IndexOf(input, StringComparison.CurrentCultureIgnoreCase) >= 0)
                     return true;
                 else
                     return false;
@@ -84,6 +83,7 @@ namespace DAL
                 t.Name = nv.name;
                 t.Address = nv.address;
                 t.Phone = nv.phone;
+                t.Position = nv.position;
                 t.State = nv.state;
                 t.AccId = (int)nv.accID;
                 lnv.Add(t);

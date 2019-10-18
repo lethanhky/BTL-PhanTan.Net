@@ -13,6 +13,7 @@ namespace Entities
         private string address;
         private string phone;
         private string state;
+        private string position;
         private int accId;
 
         public int EmpID { get => empID; set => empID = value; }
@@ -21,6 +22,7 @@ namespace Entities
         public string Phone { get => phone; set => phone = value; }
         public string State { get => state; set => state = value; }
         public int AccId { get => accId; set => accId = value; }
+        public string Position { get => position; set => position = value; }
 
         public eEmployee()
         {
@@ -29,16 +31,18 @@ namespace Entities
             this.address = "";
             this.phone = "";
             this.state = "";
+            this.position = "";
             this.accId = 0;
         }
-        public eEmployee(int empid, string name, string address,string phone,string state,int accid)
+        public eEmployee(int empid, string name, string address,string phone,string state,string position,int accid)
         {
             this.empID = empid;
             this.name = name;
             this.address = address;
             this.phone = phone;
             this.state = state;
-            this.accId = accId;
+            this.position = position;
+            this.accId = accid;
         }
     }
 }

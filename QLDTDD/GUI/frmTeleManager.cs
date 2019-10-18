@@ -22,23 +22,34 @@ namespace GUI
         }
         private void frmTeleManager_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qLDTDDDataSet.Telephone' table. You can move, or remove it, as needed.
+                // TODO: This line of code loads data into the 'qLDTDDDataSet.Telephone' table. You can move, or remove it, as needed.
             teleBus = new TelephoneBUS();
             listtele = new List<eTelephone>();
-            listtele = teleBus.GetAllTelephone();
-            dgvTele.DataSource = listtele;
+            LoadDataGriwView();
             this.txtID.Visible = false;
             this.txtIPID.Visible = false;
+            txtEnableFalse();
+            int s = dgvTele.CurrentCell.RowIndex;
+            this.dgvTele.Rows[s].Selected = true;
+        }
+        public void txtEnableFalse()
+        {
             this.txtName.Enabled = false;
             this.txtPrice.Enabled = false;
             this.txtProvider.Enabled = false;
             this.txtState.Enabled = false;
-            int s = dgvTele.CurrentCell.RowIndex;
-            this.dgvTele.Rows[s].Selected = true;
+        }
+        public void txtEnableTrue()
+        {
+            this.txtName.Enabled = true;
+            this.txtPrice.Enabled = true;
+            this.txtProvider.Enabled = true;
+            this.txtState.Enabled = true;
         }
         private void LoadDataGriwView()
         {
-            List<eTelephone> lstl = new List<eTelephone>();
+            List<eTelephone> lstl = teleBus.GetAllTelephone();
+            dgvTele.DataSource = lstl;
         }
         #region
         private void label5_Click(object sender, EventArgs e)
@@ -48,36 +59,35 @@ namespace GUI
         #endregion
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if(btnEdit.Text.Trim() == "Edit" || btnEdit.Text.Trim() == "Sửa")
+            try
             {
-                this.txtName.Enabled = true;
-                this.txtPrice.Enabled = true;
-                this.txtProvider.Enabled = true;
-                this.txtState.Enabled = true;
-                this.dgvTele.Enabled = false;
-                this.btnEdit.Text = "Save";
-            }
-            else
-            {
-                eTelephone tele = new eTelephone();
-                tele.TeleID = int.Parse(txtID.Text);
-                tele.Name = txtName.Text;
-                tele.Price = double.Parse(txtPrice.Text);
-                tele.Provider = txtProvider.Text;
-                tele.State = txtState.Text;
-                tele.ImpdetailID = int.Parse(txtIPID.Text);
-
-                int kq = teleBus.updatePhone(tele);
-                if (kq == 1)
+                if (btnEdit.Text.Trim() == "Edit" || btnEdit.Text.Trim() == "Sửa")
                 {
-                    MessageBox.Show("Edit Success !");
-                    btnEdit.Text = "Edit";
-                    this.dgvTele.Enabled = true;
+                    txtEnableTrue();
+                    this.dgvTele.Enabled = false;
+                    this.btnEdit.Text = "Cancel";
                 }
-                else MessageBox.Show("Key Exist");
+                else
+                {
+                    txtEnableFalse();
+                    this.dgvTele.Enabled = true;
+                    int s = dgvTele.CurrentCell.RowIndex;
+                    this.dgvTele.Rows[s].Selected = true;
 
-                List<eTelephone> lstl = teleBus.GetAllTelephone();
-                dgvTele.DataSource = lstl;
+                    txtID.Text = dgvTele.Rows[s].Cells["teleID"].Value.ToString().TrimEnd();
+                    txtName.Text = dgvTele.Rows[s].Cells["name"].Value.ToString().TrimEnd();
+                    txtIPID.Text = dgvTele.Rows[s].Cells["impdetailID"].Value.ToString().TrimEnd();
+                    txtPrice.Text = dgvTele.Rows[s].Cells["price"].Value.ToString().TrimEnd();
+                    txtProvider.Text = dgvTele.Rows[s].Cells["provider"].Value.ToString().TrimEnd();
+                    txtState.Text = dgvTele.Rows[s].Cells["state"].Value.ToString().TrimEnd();
+
+                    this.btnEdit.Text = "Edit";
+
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.Write(ex);
             }
         }
         private void dgvTele_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
@@ -107,6 +117,36 @@ namespace GUI
         {
             List<eTelephone> le = teleBus.SearchTelephone(txtSearch.Text.TrimEnd());
             dgvTele.DataSource = le;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                eTelephone tele = new eTelephone();
+                tele.TeleID = int.Parse(txtID.Text);
+                tele.Name = txtName.Text;
+                tele.Price = double.Parse(txtPrice.Text);
+                tele.Provider = txtProvider.Text;
+                tele.State = txtState.Text;
+                tele.ImpdetailID = int.Parse(txtIPID.Text);
+
+                int kq = teleBus.updatePhone(tele);
+                if (kq == 1)
+                {
+                    MessageBox.Show("Edit Success !");
+                    btnEdit.Text = "Edit";
+                    txtEnableFalse();
+                    this.dgvTele.Enabled = true;
+                }
+                else MessageBox.Show("Key Exist");
+                LoadDataGriwView();
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex);
+                throw;
+            }
         }
     }
 }

@@ -19,11 +19,11 @@ namespace BUS
         {
             return emDAL.getAllEmployee();
         }
-        public int inSertEmployee(Employee em)
+        public void inSertEmployee(eEmployee em)
         {
-            return emDAL.InsertEmployee(em);
+            emDAL.InsertEmployee(em);
         }
-        public int editEmployee(Employee em)
+        public int editEmployee(eEmployee em)
         {
             return emDAL.EditEmployee(em);
         }

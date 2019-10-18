@@ -46,6 +46,7 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvTele = new System.Windows.Forms.DataGridView();
+            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -78,6 +79,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnSave);
             this.groupBox2.Controls.Add(this.txtIPID);
             this.groupBox2.Controls.Add(this.txtID);
             this.groupBox2.Controls.Add(this.btnDelete);
@@ -116,18 +118,18 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(123, 298);
+            this.btnDelete.Location = new System.Drawing.Point(154, 298);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.Size = new System.Drawing.Size(61, 23);
             this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(16, 298);
+            this.btnEdit.Location = new System.Drawing.Point(6, 298);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.Size = new System.Drawing.Size(61, 23);
             this.btnEdit.TabIndex = 8;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -240,12 +242,23 @@
             this.dgvTele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTele.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTele.Location = new System.Drawing.Point(3, 19);
+            this.dgvTele.MultiSelect = false;
             this.dgvTele.Name = "dgvTele";
             this.dgvTele.ReadOnly = true;
             this.dgvTele.Size = new System.Drawing.Size(457, 247);
             this.dgvTele.TabIndex = 0;
             this.dgvTele.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTele_CellClick);
             this.dgvTele.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvTele_RowStateChanged);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(80, 298);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(61, 23);
+            this.btnSave.TabIndex = 13;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // frmTeleManager
             // 
@@ -293,5 +306,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnSave;
     }
 }
