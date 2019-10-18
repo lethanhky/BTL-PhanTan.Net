@@ -96,6 +96,7 @@ namespace GUI
                     txtEnableTrue();
                     this.btnInsert.Enabled = false;
                     this.btnDelete.Enabled = false;
+                    dgvEm.Enabled = false;
                     this.btnEdit.Text = "Cancel";
                 }
                 else
@@ -153,8 +154,6 @@ namespace GUI
                         returnIndex();
                     }
                     else MessageBox.Show("Key Not Exist");
-                    this.btnEdit.Enabled = false;
-                    this.btnDelete.Enabled = false;
                     LoadDataGriwView();
                 }
                 else if (btnInsert.Text == "Cancel")
@@ -230,6 +229,11 @@ namespace GUI
                 this.btnInsert.Text = "Insert";
                 this.btnEdit.Enabled = true;
                 this.btnDelete.Enabled = true;
+                this.btnNewAc.Visible = false;
+                this.lblnote.Visible = false;
+                this.dgvEm.Visible = true;
+                grpNewAc.Visible = false;
+                this.btnNewAc.Text = "New Account";
             }
         }
 

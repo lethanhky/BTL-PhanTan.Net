@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTeleManager));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.txtIPID = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -46,7 +48,7 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvTele = new System.Windows.Forms.DataGridView();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -62,23 +64,27 @@
             // 
             // splitContainer1
             // 
+            this.splitContainer1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer1.BackgroundImage")));
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer1.Panel1.Controls.Add(this.groupBox2);
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(701, 347);
-            this.splitContainer1.SplitterDistance = 228;
+            this.splitContainer1.Size = new System.Drawing.Size(733, 372);
+            this.splitContainer1.SplitterDistance = 238;
             this.splitContainer1.TabIndex = 0;
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.btnSave);
             this.groupBox2.Controls.Add(this.txtIPID);
             this.groupBox2.Controls.Add(this.txtID);
@@ -95,14 +101,25 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(225, 347);
+            this.groupBox2.Size = new System.Drawing.Size(235, 369);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin điện thoại";
             // 
+            // btnSave
+            // 
+            this.btnSave.ForeColor = System.Drawing.Color.DarkViolet;
+            this.btnSave.Location = new System.Drawing.Point(87, 315);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(61, 34);
+            this.btnSave.TabIndex = 13;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // txtIPID
             // 
-            this.txtIPID.Location = new System.Drawing.Point(101, 244);
+            this.txtIPID.Location = new System.Drawing.Point(107, 244);
             this.txtIPID.Name = "txtIPID";
             this.txtIPID.ReadOnly = true;
             this.txtIPID.Size = new System.Drawing.Size(115, 23);
@@ -110,7 +127,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(101, 38);
+            this.txtID.Location = new System.Drawing.Point(107, 38);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(115, 23);
@@ -118,18 +135,20 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(154, 298);
+            this.btnDelete.ForeColor = System.Drawing.Color.DarkViolet;
+            this.btnDelete.Location = new System.Drawing.Point(161, 315);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(61, 23);
+            this.btnDelete.Size = new System.Drawing.Size(61, 34);
             this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(6, 298);
+            this.btnEdit.ForeColor = System.Drawing.Color.DarkViolet;
+            this.btnEdit.Location = new System.Drawing.Point(13, 315);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(61, 23);
+            this.btnEdit.Size = new System.Drawing.Size(61, 34);
             this.btnEdit.TabIndex = 8;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -137,28 +156,28 @@
             // 
             // txtState
             // 
-            this.txtState.Location = new System.Drawing.Point(101, 202);
+            this.txtState.Location = new System.Drawing.Point(107, 202);
             this.txtState.Name = "txtState";
             this.txtState.Size = new System.Drawing.Size(115, 23);
             this.txtState.TabIndex = 7;
             // 
             // txtProvider
             // 
-            this.txtProvider.Location = new System.Drawing.Point(101, 156);
+            this.txtProvider.Location = new System.Drawing.Point(107, 156);
             this.txtProvider.Name = "txtProvider";
             this.txtProvider.Size = new System.Drawing.Size(115, 23);
             this.txtProvider.TabIndex = 6;
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(101, 116);
+            this.txtPrice.Location = new System.Drawing.Point(107, 116);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(115, 23);
             this.txtPrice.TabIndex = 5;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(101, 77);
+            this.txtName.Location = new System.Drawing.Point(107, 77);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(115, 23);
             this.txtName.TabIndex = 4;
@@ -166,7 +185,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 205);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(19, 205);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 16);
             this.label4.TabIndex = 3;
@@ -175,7 +195,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 164);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(19, 164);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 16);
             this.label3.TabIndex = 2;
@@ -184,7 +205,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 123);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(19, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 16);
             this.label2.TabIndex = 1;
@@ -193,7 +215,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 82);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(19, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 16);
             this.label1.TabIndex = 0;
@@ -201,6 +224,7 @@
             // 
             // splitContainer2
             // 
+            this.splitContainer2.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
             this.splitContainer2.Name = "splitContainer2";
@@ -208,20 +232,22 @@
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.label6);
             this.splitContainer2.Panel1.Controls.Add(this.txtSearch);
             // 
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.groupBox1);
-            this.splitContainer2.Size = new System.Drawing.Size(469, 347);
-            this.splitContainer2.SplitterDistance = 71;
+            this.splitContainer2.Size = new System.Drawing.Size(491, 372);
+            this.splitContainer2.SplitterDistance = 76;
             this.splitContainer2.TabIndex = 0;
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(45, 23);
+            this.txtSearch.Location = new System.Drawing.Point(111, 23);
+            this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(385, 20);
+            this.txtSearch.Size = new System.Drawing.Size(337, 26);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.UseWaitCursor = true;
             this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
@@ -232,7 +258,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(463, 269);
+            this.groupBox1.Size = new System.Drawing.Size(485, 286);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách điện thoại";
@@ -245,27 +271,29 @@
             this.dgvTele.MultiSelect = false;
             this.dgvTele.Name = "dgvTele";
             this.dgvTele.ReadOnly = true;
-            this.dgvTele.Size = new System.Drawing.Size(457, 247);
+            this.dgvTele.Size = new System.Drawing.Size(479, 264);
             this.dgvTele.TabIndex = 0;
             this.dgvTele.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTele_CellClick);
             this.dgvTele.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvTele_RowStateChanged);
             // 
-            // btnSave
+            // label6
             // 
-            this.btnSave.Location = new System.Drawing.Point(80, 298);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(61, 23);
-            this.btnSave.TabIndex = 13;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Snow;
+            this.label6.Location = new System.Drawing.Point(44, 27);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 16);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Search : ";
             // 
             // frmTeleManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(701, 347);
+            this.ClientSize = new System.Drawing.Size(733, 372);
             this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmTeleManager";
             this.Text = "Telephone Manage";
             this.Load += new System.EventHandler(this.frmTeleManager_Load);
@@ -307,5 +335,6 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label label6;
     }
 }
