@@ -55,8 +55,9 @@ namespace DAL
                 return 1;
             }
         }
-        public void EditEmployee(Employee emold) // Chinh sua thong tin nhan vien
+        public int EditEmployee(Employee emold) // Chinh sua thong tin nhan vien
         {
+            if (CheckIsExist((int)emold.empID)) return 0;
             IQueryable<Employee> em = db.Employees.Where(x => x.empID == emold.empID);
             em.First().name = emold.name;
             em.First().address = emold.address;
@@ -64,6 +65,7 @@ namespace DAL
             em.First().state = emold.state;
             em.First().accID = (int)emold.accID;
             db.SubmitChanges();
+            return 1;
         }
         public List<eEmployee> SearchEmployee(string input)//tim kiem nv 
         {

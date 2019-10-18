@@ -33,9 +33,9 @@ namespace DAL
     partial void InsertAccount(Account instance);
     partial void UpdateAccount(Account instance);
     partial void DeleteAccount(Account instance);
-    partial void InsertTelephone(Telephone instance);
-    partial void UpdateTelephone(Telephone instance);
-    partial void DeleteTelephone(Telephone instance);
+    partial void InsertOrderDetail(OrderDetail instance);
+    partial void UpdateOrderDetail(OrderDetail instance);
+    partial void DeleteOrderDetail(OrderDetail instance);
     partial void InsertEmployee(Employee instance);
     partial void UpdateEmployee(Employee instance);
     partial void DeleteEmployee(Employee instance);
@@ -48,9 +48,9 @@ namespace DAL
     partial void InsertOrder(Order instance);
     partial void UpdateOrder(Order instance);
     partial void DeleteOrder(Order instance);
-    partial void InsertOrderDetail(OrderDetail instance);
-    partial void UpdateOrderDetail(OrderDetail instance);
-    partial void DeleteOrderDetail(OrderDetail instance);
+    partial void InsertTelephone(Telephone instance);
+    partial void UpdateTelephone(Telephone instance);
+    partial void DeleteTelephone(Telephone instance);
     #endregion
 		
 		public QLDTDDDataContext() : 
@@ -91,11 +91,11 @@ namespace DAL
 			}
 		}
 		
-		public System.Data.Linq.Table<Telephone> Telephones
+		public System.Data.Linq.Table<OrderDetail> OrderDetails
 		{
 			get
 			{
-				return this.GetTable<Telephone>();
+				return this.GetTable<OrderDetail>();
 			}
 		}
 		
@@ -131,11 +131,11 @@ namespace DAL
 			}
 		}
 		
-		public System.Data.Linq.Table<OrderDetail> OrderDetails
+		public System.Data.Linq.Table<Telephone> Telephones
 		{
 			get
 			{
-				return this.GetTable<OrderDetail>();
+				return this.GetTable<Telephone>();
 			}
 		}
 	}
@@ -278,63 +278,135 @@ namespace DAL
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Telephone")]
-	public partial class Telephone : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OrderDetail")]
+	public partial class OrderDetail : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _teleID;
+		private int _detailID;
 		
-		private string _name;
+		private System.Nullable<decimal> _unitprice;
 		
-		private System.Nullable<int> _impdetaiID;
+		private System.Nullable<decimal> _amount;
 		
-		private System.Nullable<decimal> _price;
+		private System.Nullable<int> _orderID;
 		
-		private System.Nullable<int> _quantity;
+		private System.Nullable<int> _teleID;
 		
-		private string _provider;
+		private EntityRef<Order> _Order;
 		
-		private string _state;
-		
-		private System.Nullable<int> _____typeID;
-		
-		private EntitySet<OrderDetail> _OrderDetails;
-		
-		private EntityRef<ImportCouponDetail> _ImportCouponDetail;
+		private EntityRef<Telephone> _Telephone;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnteleIDChanging(int value);
+    partial void OndetailIDChanging(int value);
+    partial void OndetailIDChanged();
+    partial void OnunitpriceChanging(System.Nullable<decimal> value);
+    partial void OnunitpriceChanged();
+    partial void OnamountChanging(System.Nullable<decimal> value);
+    partial void OnamountChanged();
+    partial void OnorderIDChanging(System.Nullable<int> value);
+    partial void OnorderIDChanged();
+    partial void OnteleIDChanging(System.Nullable<int> value);
     partial void OnteleIDChanged();
-    partial void OnnameChanging(string value);
-    partial void OnnameChanged();
-    partial void OnimpdetaiIDChanging(System.Nullable<int> value);
-    partial void OnimpdetaiIDChanged();
-    partial void OnpriceChanging(System.Nullable<decimal> value);
-    partial void OnpriceChanged();
-    partial void OnquantityChanging(System.Nullable<int> value);
-    partial void OnquantityChanged();
-    partial void OnproviderChanging(string value);
-    partial void OnproviderChanged();
-    partial void OnstateChanging(string value);
-    partial void OnstateChanged();
-    partial void On____typeIDChanging(System.Nullable<int> value);
-    partial void On____typeIDChanged();
     #endregion
 		
-		public Telephone()
+		public OrderDetail()
 		{
-			this._OrderDetails = new EntitySet<OrderDetail>(new Action<OrderDetail>(this.attach_OrderDetails), new Action<OrderDetail>(this.detach_OrderDetails));
-			this._ImportCouponDetail = default(EntityRef<ImportCouponDetail>);
+			this._Order = default(EntityRef<Order>);
+			this._Telephone = default(EntityRef<Telephone>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_teleID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int teleID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_detailID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int detailID
+		{
+			get
+			{
+				return this._detailID;
+			}
+			set
+			{
+				if ((this._detailID != value))
+				{
+					this.OndetailIDChanging(value);
+					this.SendPropertyChanging();
+					this._detailID = value;
+					this.SendPropertyChanged("detailID");
+					this.OndetailIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_unitprice", DbType="Money")]
+		public System.Nullable<decimal> unitprice
+		{
+			get
+			{
+				return this._unitprice;
+			}
+			set
+			{
+				if ((this._unitprice != value))
+				{
+					this.OnunitpriceChanging(value);
+					this.SendPropertyChanging();
+					this._unitprice = value;
+					this.SendPropertyChanged("unitprice");
+					this.OnunitpriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_amount", DbType="Money")]
+		public System.Nullable<decimal> amount
+		{
+			get
+			{
+				return this._amount;
+			}
+			set
+			{
+				if ((this._amount != value))
+				{
+					this.OnamountChanging(value);
+					this.SendPropertyChanging();
+					this._amount = value;
+					this.SendPropertyChanged("amount");
+					this.OnamountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_orderID", DbType="Int")]
+		public System.Nullable<int> orderID
+		{
+			get
+			{
+				return this._orderID;
+			}
+			set
+			{
+				if ((this._orderID != value))
+				{
+					if (this._Order.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnorderIDChanging(value);
+					this.SendPropertyChanging();
+					this._orderID = value;
+					this.SendPropertyChanged("orderID");
+					this.OnorderIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_teleID", DbType="Int")]
+		public System.Nullable<int> teleID
 		{
 			get
 			{
@@ -344,6 +416,10 @@ namespace DAL
 			{
 				if ((this._teleID != value))
 				{
+					if (this._Telephone.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnteleIDChanging(value);
 					this.SendPropertyChanging();
 					this._teleID = value;
@@ -353,193 +429,70 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(50)")]
-		public string name
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Order_OrderDetail", Storage="_Order", ThisKey="orderID", OtherKey="orderID", IsForeignKey=true)]
+		public Order Order
 		{
 			get
 			{
-				return this._name;
+				return this._Order.Entity;
 			}
 			set
 			{
-				if ((this._name != value))
-				{
-					this.OnnameChanging(value);
-					this.SendPropertyChanging();
-					this._name = value;
-					this.SendPropertyChanged("name");
-					this.OnnameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_impdetaiID", DbType="Int")]
-		public System.Nullable<int> impdetaiID
-		{
-			get
-			{
-				return this._impdetaiID;
-			}
-			set
-			{
-				if ((this._impdetaiID != value))
-				{
-					if (this._ImportCouponDetail.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnimpdetaiIDChanging(value);
-					this.SendPropertyChanging();
-					this._impdetaiID = value;
-					this.SendPropertyChanged("impdetaiID");
-					this.OnimpdetaiIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_price", DbType="Money")]
-		public System.Nullable<decimal> price
-		{
-			get
-			{
-				return this._price;
-			}
-			set
-			{
-				if ((this._price != value))
-				{
-					this.OnpriceChanging(value);
-					this.SendPropertyChanging();
-					this._price = value;
-					this.SendPropertyChanged("price");
-					this.OnpriceChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_quantity", DbType="Int")]
-		public System.Nullable<int> quantity
-		{
-			get
-			{
-				return this._quantity;
-			}
-			set
-			{
-				if ((this._quantity != value))
-				{
-					this.OnquantityChanging(value);
-					this.SendPropertyChanging();
-					this._quantity = value;
-					this.SendPropertyChanged("quantity");
-					this.OnquantityChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_provider", DbType="NChar(10)")]
-		public string provider
-		{
-			get
-			{
-				return this._provider;
-			}
-			set
-			{
-				if ((this._provider != value))
-				{
-					this.OnproviderChanging(value);
-					this.SendPropertyChanging();
-					this._provider = value;
-					this.SendPropertyChanged("provider");
-					this.OnproviderChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_state", DbType="NChar(10)")]
-		public string state
-		{
-			get
-			{
-				return this._state;
-			}
-			set
-			{
-				if ((this._state != value))
-				{
-					this.OnstateChanging(value);
-					this.SendPropertyChanging();
-					this._state = value;
-					this.SendPropertyChanged("state");
-					this.OnstateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[\r\n\t[typeID]", Storage="_____typeID", DbType="Int")]
-		public System.Nullable<int> ____typeID
-		{
-			get
-			{
-				return this._____typeID;
-			}
-			set
-			{
-				if ((this._____typeID != value))
-				{
-					this.On____typeIDChanging(value);
-					this.SendPropertyChanging();
-					this._____typeID = value;
-					this.SendPropertyChanged("____typeID");
-					this.On____typeIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Telephone_OrderDetail", Storage="_OrderDetails", ThisKey="teleID", OtherKey="teleID")]
-		public EntitySet<OrderDetail> OrderDetails
-		{
-			get
-			{
-				return this._OrderDetails;
-			}
-			set
-			{
-				this._OrderDetails.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ImportCouponDetail_Telephone", Storage="_ImportCouponDetail", ThisKey="impdetaiID", OtherKey="impdetaiID", IsForeignKey=true)]
-		public ImportCouponDetail ImportCouponDetail
-		{
-			get
-			{
-				return this._ImportCouponDetail.Entity;
-			}
-			set
-			{
-				ImportCouponDetail previousValue = this._ImportCouponDetail.Entity;
+				Order previousValue = this._Order.Entity;
 				if (((previousValue != value) 
-							|| (this._ImportCouponDetail.HasLoadedOrAssignedValue == false)))
+							|| (this._Order.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._ImportCouponDetail.Entity = null;
-						previousValue.Telephones.Remove(this);
+						this._Order.Entity = null;
+						previousValue.OrderDetails.Remove(this);
 					}
-					this._ImportCouponDetail.Entity = value;
+					this._Order.Entity = value;
 					if ((value != null))
 					{
-						value.Telephones.Add(this);
-						this._impdetaiID = value.impdetaiID;
+						value.OrderDetails.Add(this);
+						this._orderID = value.orderID;
 					}
 					else
 					{
-						this._impdetaiID = default(Nullable<int>);
+						this._orderID = default(Nullable<int>);
 					}
-					this.SendPropertyChanged("ImportCouponDetail");
+					this.SendPropertyChanged("Order");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Telephone_OrderDetail", Storage="_Telephone", ThisKey="teleID", OtherKey="teleID", IsForeignKey=true)]
+		public Telephone Telephone
+		{
+			get
+			{
+				return this._Telephone.Entity;
+			}
+			set
+			{
+				Telephone previousValue = this._Telephone.Entity;
+				if (((previousValue != value) 
+							|| (this._Telephone.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Telephone.Entity = null;
+						previousValue.OrderDetails.Remove(this);
+					}
+					this._Telephone.Entity = value;
+					if ((value != null))
+					{
+						value.OrderDetails.Add(this);
+						this._teleID = value.teleID;
+					}
+					else
+					{
+						this._teleID = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Telephone");
 				}
 			}
 		}
@@ -562,18 +515,6 @@ namespace DAL
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_OrderDetails(OrderDetail entity)
-		{
-			this.SendPropertyChanging();
-			entity.Telephone = this;
-		}
-		
-		private void detach_OrderDetails(OrderDetail entity)
-		{
-			this.SendPropertyChanging();
-			entity.Telephone = null;
 		}
 	}
 	
@@ -1585,135 +1526,55 @@ namespace DAL
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OrderDetail")]
-	public partial class OrderDetail : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Telephone")]
+	public partial class Telephone : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _detailID;
+		private int _teleID;
 		
-		private System.Nullable<decimal> _unitprice;
+		private string _name;
 		
-		private System.Nullable<decimal> _amount;
+		private System.Nullable<int> _impdetaiID;
 		
-		private System.Nullable<int> _orderID;
+		private System.Nullable<decimal> _price;
 		
-		private System.Nullable<int> _teleID;
+		private string _provider;
 		
-		private EntityRef<Order> _Order;
+		private string _state;
 		
-		private EntityRef<Telephone> _Telephone;
+		private EntitySet<OrderDetail> _OrderDetails;
+		
+		private EntityRef<ImportCouponDetail> _ImportCouponDetail;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OndetailIDChanging(int value);
-    partial void OndetailIDChanged();
-    partial void OnunitpriceChanging(System.Nullable<decimal> value);
-    partial void OnunitpriceChanged();
-    partial void OnamountChanging(System.Nullable<decimal> value);
-    partial void OnamountChanged();
-    partial void OnorderIDChanging(System.Nullable<int> value);
-    partial void OnorderIDChanged();
-    partial void OnteleIDChanging(System.Nullable<int> value);
+    partial void OnteleIDChanging(int value);
     partial void OnteleIDChanged();
+    partial void OnnameChanging(string value);
+    partial void OnnameChanged();
+    partial void OnimpdetaiIDChanging(System.Nullable<int> value);
+    partial void OnimpdetaiIDChanged();
+    partial void OnpriceChanging(System.Nullable<decimal> value);
+    partial void OnpriceChanged();
+    partial void OnproviderChanging(string value);
+    partial void OnproviderChanged();
+    partial void OnstateChanging(string value);
+    partial void OnstateChanged();
     #endregion
 		
-		public OrderDetail()
+		public Telephone()
 		{
-			this._Order = default(EntityRef<Order>);
-			this._Telephone = default(EntityRef<Telephone>);
+			this._OrderDetails = new EntitySet<OrderDetail>(new Action<OrderDetail>(this.attach_OrderDetails), new Action<OrderDetail>(this.detach_OrderDetails));
+			this._ImportCouponDetail = default(EntityRef<ImportCouponDetail>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_detailID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int detailID
-		{
-			get
-			{
-				return this._detailID;
-			}
-			set
-			{
-				if ((this._detailID != value))
-				{
-					this.OndetailIDChanging(value);
-					this.SendPropertyChanging();
-					this._detailID = value;
-					this.SendPropertyChanged("detailID");
-					this.OndetailIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_unitprice", DbType="Money")]
-		public System.Nullable<decimal> unitprice
-		{
-			get
-			{
-				return this._unitprice;
-			}
-			set
-			{
-				if ((this._unitprice != value))
-				{
-					this.OnunitpriceChanging(value);
-					this.SendPropertyChanging();
-					this._unitprice = value;
-					this.SendPropertyChanged("unitprice");
-					this.OnunitpriceChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_amount", DbType="Money")]
-		public System.Nullable<decimal> amount
-		{
-			get
-			{
-				return this._amount;
-			}
-			set
-			{
-				if ((this._amount != value))
-				{
-					this.OnamountChanging(value);
-					this.SendPropertyChanging();
-					this._amount = value;
-					this.SendPropertyChanged("amount");
-					this.OnamountChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_orderID", DbType="Int")]
-		public System.Nullable<int> orderID
-		{
-			get
-			{
-				return this._orderID;
-			}
-			set
-			{
-				if ((this._orderID != value))
-				{
-					if (this._Order.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnorderIDChanging(value);
-					this.SendPropertyChanging();
-					this._orderID = value;
-					this.SendPropertyChanged("orderID");
-					this.OnorderIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_teleID", DbType="Int")]
-		public System.Nullable<int> teleID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_teleID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int teleID
 		{
 			get
 			{
@@ -1723,10 +1584,6 @@ namespace DAL
 			{
 				if ((this._teleID != value))
 				{
-					if (this._Telephone.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.OnteleIDChanging(value);
 					this.SendPropertyChanging();
 					this._teleID = value;
@@ -1736,70 +1593,153 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Order_OrderDetail", Storage="_Order", ThisKey="orderID", OtherKey="orderID", IsForeignKey=true)]
-		public Order Order
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(50)")]
+		public string name
 		{
 			get
 			{
-				return this._Order.Entity;
+				return this._name;
 			}
 			set
 			{
-				Order previousValue = this._Order.Entity;
-				if (((previousValue != value) 
-							|| (this._Order.HasLoadedOrAssignedValue == false)))
+				if ((this._name != value))
 				{
+					this.OnnameChanging(value);
 					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Order.Entity = null;
-						previousValue.OrderDetails.Remove(this);
-					}
-					this._Order.Entity = value;
-					if ((value != null))
-					{
-						value.OrderDetails.Add(this);
-						this._orderID = value.orderID;
-					}
-					else
-					{
-						this._orderID = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("Order");
+					this._name = value;
+					this.SendPropertyChanged("name");
+					this.OnnameChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Telephone_OrderDetail", Storage="_Telephone", ThisKey="teleID", OtherKey="teleID", IsForeignKey=true)]
-		public Telephone Telephone
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_impdetaiID", DbType="Int")]
+		public System.Nullable<int> impdetaiID
 		{
 			get
 			{
-				return this._Telephone.Entity;
+				return this._impdetaiID;
 			}
 			set
 			{
-				Telephone previousValue = this._Telephone.Entity;
+				if ((this._impdetaiID != value))
+				{
+					if (this._ImportCouponDetail.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnimpdetaiIDChanging(value);
+					this.SendPropertyChanging();
+					this._impdetaiID = value;
+					this.SendPropertyChanged("impdetaiID");
+					this.OnimpdetaiIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_price", DbType="Money")]
+		public System.Nullable<decimal> price
+		{
+			get
+			{
+				return this._price;
+			}
+			set
+			{
+				if ((this._price != value))
+				{
+					this.OnpriceChanging(value);
+					this.SendPropertyChanging();
+					this._price = value;
+					this.SendPropertyChanged("price");
+					this.OnpriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_provider", DbType="NChar(10)")]
+		public string provider
+		{
+			get
+			{
+				return this._provider;
+			}
+			set
+			{
+				if ((this._provider != value))
+				{
+					this.OnproviderChanging(value);
+					this.SendPropertyChanging();
+					this._provider = value;
+					this.SendPropertyChanged("provider");
+					this.OnproviderChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_state", DbType="NChar(10)")]
+		public string state
+		{
+			get
+			{
+				return this._state;
+			}
+			set
+			{
+				if ((this._state != value))
+				{
+					this.OnstateChanging(value);
+					this.SendPropertyChanging();
+					this._state = value;
+					this.SendPropertyChanged("state");
+					this.OnstateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Telephone_OrderDetail", Storage="_OrderDetails", ThisKey="teleID", OtherKey="teleID")]
+		public EntitySet<OrderDetail> OrderDetails
+		{
+			get
+			{
+				return this._OrderDetails;
+			}
+			set
+			{
+				this._OrderDetails.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ImportCouponDetail_Telephone", Storage="_ImportCouponDetail", ThisKey="impdetaiID", OtherKey="impdetaiID", IsForeignKey=true)]
+		public ImportCouponDetail ImportCouponDetail
+		{
+			get
+			{
+				return this._ImportCouponDetail.Entity;
+			}
+			set
+			{
+				ImportCouponDetail previousValue = this._ImportCouponDetail.Entity;
 				if (((previousValue != value) 
-							|| (this._Telephone.HasLoadedOrAssignedValue == false)))
+							|| (this._ImportCouponDetail.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._Telephone.Entity = null;
-						previousValue.OrderDetails.Remove(this);
+						this._ImportCouponDetail.Entity = null;
+						previousValue.Telephones.Remove(this);
 					}
-					this._Telephone.Entity = value;
+					this._ImportCouponDetail.Entity = value;
 					if ((value != null))
 					{
-						value.OrderDetails.Add(this);
-						this._teleID = value.teleID;
+						value.Telephones.Add(this);
+						this._impdetaiID = value.impdetaiID;
 					}
 					else
 					{
-						this._teleID = default(Nullable<int>);
+						this._impdetaiID = default(Nullable<int>);
 					}
-					this.SendPropertyChanged("Telephone");
+					this.SendPropertyChanged("ImportCouponDetail");
 				}
 			}
 		}
@@ -1822,6 +1762,18 @@ namespace DAL
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_OrderDetails(OrderDetail entity)
+		{
+			this.SendPropertyChanging();
+			entity.Telephone = this;
+		}
+		
+		private void detach_OrderDetails(OrderDetail entity)
+		{
+			this.SendPropertyChanging();
+			entity.Telephone = null;
 		}
 	}
 }

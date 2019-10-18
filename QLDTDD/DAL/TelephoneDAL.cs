@@ -24,6 +24,7 @@ namespace DAL
                 eTelephone te = new eTelephone();
                 te.TeleID = t.teleID;
                 te.Name = t.name;
+                te.ImpdetailID = (int)t.impdetaiID;
                 te.Price = double.Parse(t.price.ToString());
                 te.Provider = t.provider;
                 te.State = t.state;
@@ -71,7 +72,7 @@ namespace DAL
         {
             var listTele = db.Telephones.Where(delegate (Telephone c)
             {
-                if (ConvertToUnSign(c.teleID + c.name + c.price + c.provider + c.state).IndexOf(input, StringComparison.CurrentCultureIgnoreCase) >= 0)
+                if (ConvertToUnSign(c.teleID + c.name + c.impdetaiID + c.price + c.provider + c.state).IndexOf(input, StringComparison.CurrentCultureIgnoreCase) >= 0)
                     return true;
                 else
                     return false;
@@ -83,6 +84,7 @@ namespace DAL
                 eTelephone te = new eTelephone();
                 te.TeleID = t.teleID;
                 te.Name = t.name;
+                te.ImpdetailID = (int)t.impdetaiID;
                 te.Price = double.Parse(t.price.ToString());
                 te.Provider = t.provider;
                 te.State = t.state;
@@ -102,9 +104,9 @@ namespace DAL
             if (checkIfExist(tele.TeleID))
                 return 0;
             Telephone t = new Telephone();
-
             t.teleID = tele.TeleID;
             t.name = tele.Name;
+            t.impdetaiID = tele.ImpdetailID;
             t.price = decimal.Parse(tele.Price.ToString());
             t.provider = tele.Provider;
             t.state = tele.State;
@@ -113,14 +115,18 @@ namespace DAL
             db.SubmitChanges();
             return 1;
         }
-        public void EditTelephone(eTelephone teleold) // Chinh sua thong tin nhan vien
+        public int EditTelephone(eTelephone teleold) // Chinh sua thong tin nhan vien
         {
+            if (!checkIfExist(teleold.TeleID))
+                return 0;
             IQueryable<Telephone> tele = db.Telephones.Where(x => x.teleID == teleold.TeleID);
             tele.First().name = teleold.Name;
             tele.First().price = (decimal)teleold.Price;
+            tele.First().impdetaiID = teleold.ImpdetailID;
             tele.First().provider = teleold.Provider;
             tele.First().state = teleold.State;
             db.SubmitChanges();
+            return 1;
         }
     }
 }

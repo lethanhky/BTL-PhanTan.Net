@@ -19,10 +19,7 @@ namespace BUS
         {
             return teleDAL.getAllTelephone();
         }
-        public List<eTelephone> GetTelephoneByID(int id)
-        {
-            return teleDAL.getTelephoneByTypeID(id);
-        }
+       
         public List<eTelephone> SearchTelephone(string input)
         {
             return teleDAL.SearchTelephone(input);
@@ -31,9 +28,9 @@ namespace BUS
         {
             return teleDAL.insertTelephone(tele);
         }
-        public void updatePhone(eTelephone tele)
+        public int updatePhone(eTelephone tele)
         {
-            teleDAL.EditTelephone(tele);
+            return teleDAL.EditTelephone(tele);
         }
     }
 }

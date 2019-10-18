@@ -47,17 +47,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmEmplManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmplManage.Designer.cs">
+      <DependentUpon>frmEmplManage.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTelephoneManage.cs">
+    <Compile Include="frmTeleManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTelephoneManage.Designer.cs">
-      <DependentUpon>frmTelephoneManage.cs</DependentUpon>
+    <Compile Include="frmTeleManager.Designer.cs">
+      <DependentUpon>frmTeleManager.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,8 +72,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDTDDDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmTelephoneManage.resx">
-      <DependentUpon>frmTelephoneManage.cs</DependentUpon>
+    <EmbeddedResource Include="frmEmplManage.resx">
+      <DependentUpon>frmEmplManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeleManager.resx">
+      <DependentUpon>frmTeleManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

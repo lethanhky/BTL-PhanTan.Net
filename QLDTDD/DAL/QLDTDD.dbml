@@ -8,18 +8,15 @@
       <Association Name="Account_Employee" Member="Employees" ThisKey="accID" OtherKey="accID" Type="Employee" />
     </Type>
   </Table>
-  <Table Name="dbo.Telephone" Member="Telephones">
-    <Type Name="Telephone">
-      <Column Name="teleID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="impdetaiID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Column Name="quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="provider" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="state" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="[&#xD;&#xA;&#x9;[typeID]" Member="____typeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Telephone_OrderDetail" Member="OrderDetails" ThisKey="teleID" OtherKey="teleID" Type="OrderDetail" />
-      <Association Name="ImportCouponDetail_Telephone" Member="ImportCouponDetail" ThisKey="impdetaiID" OtherKey="impdetaiID" Type="ImportCouponDetail" IsForeignKey="true" />
+  <Table Name="dbo.OrderDetail" Member="OrderDetails">
+    <Type Name="OrderDetail">
+      <Column Name="detailID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="unitprice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="amount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="orderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="teleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Order_OrderDetail" Member="Order" ThisKey="orderID" OtherKey="orderID" Type="Order" IsForeignKey="true" />
+      <Association Name="Telephone_OrderDetail" Member="Telephone" ThisKey="teleID" OtherKey="teleID" Type="Telephone" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Employee" Member="Employees">
@@ -70,15 +67,16 @@
       <Association Name="Employee_Order" Member="Employee" ThisKey="empID" OtherKey="empID" Type="Employee" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.OrderDetail" Member="OrderDetails">
-    <Type Name="OrderDetail">
-      <Column Name="detailID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="unitprice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Column Name="amount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Column Name="orderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="teleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Order_OrderDetail" Member="Order" ThisKey="orderID" OtherKey="orderID" Type="Order" IsForeignKey="true" />
-      <Association Name="Telephone_OrderDetail" Member="Telephone" ThisKey="teleID" OtherKey="teleID" Type="Telephone" IsForeignKey="true" />
+  <Table Name="dbo.Telephone" Member="Telephones">
+    <Type Name="Telephone">
+      <Column Name="teleID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="impdetaiID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="provider" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="state" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="Telephone_OrderDetail" Member="OrderDetails" ThisKey="teleID" OtherKey="teleID" Type="OrderDetail" />
+      <Association Name="ImportCouponDetail_Telephone" Member="ImportCouponDetail" ThisKey="impdetaiID" OtherKey="impdetaiID" Type="ImportCouponDetail" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>
