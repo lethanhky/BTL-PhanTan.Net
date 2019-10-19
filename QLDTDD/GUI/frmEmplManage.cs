@@ -14,12 +14,14 @@ namespace GUI
 {
     public partial class frmEmplManage : Form
     {
+        frmMenu tc = null;
         List<eEmployee> lsem;
         EmployeeBUS emBUS;
         AccountBUS accBUS;
-        public frmEmplManage()
+        public frmEmplManage(Panel p , frmMenu frm)
         {
             InitializeComponent();
+            tc = frm;
         }
 
         private void frmEmplManage_Load(object sender, EventArgs e)

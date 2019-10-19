@@ -59,5 +59,65 @@ namespace GUI.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aqua_button_hi {
+            get {
+                object obj = ResourceManager.GetObject("aqua-button-hi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnDangNhap {
+            get {
+                object obj = ResourceManager.GetObject("btnDangNhap", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnsilver {
+            get {
+                object obj = ResourceManager.GetObject("btnsilver", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_PA_background_web {
+            get {
+                object obj = ResourceManager.GetObject("new-PA-background-web", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rectangle_metallic_silver_vinyl_printed_labels_stickers_1_1024x1024 {
+            get {
+                object obj = ResourceManager.GetObject("rectangle-metallic-silver-vinyl-printed-labels-stickers-1_1024x1024", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rectangle_metallic_silver_vinyl_printed_labels_stickers_1_1024x10241 {
+            get {
+                object obj = ResourceManager.GetObject("rectangle-metallic-silver-vinyl-printed-labels-stickers-1_1024x10241", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

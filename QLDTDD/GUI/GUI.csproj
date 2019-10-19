@@ -65,6 +65,12 @@
     <Compile Include="frmTeleManager.Designer.cs">
       <DependentUpon>frmTeleManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrangChu.Designer.cs">
+      <DependentUpon>frmTrangChu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLDTDDDataSet.Designer.cs">
@@ -75,8 +81,14 @@
     <EmbeddedResource Include="frmEmplManage.resx">
       <DependentUpon>frmEmplManage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTeleManager.resx">
       <DependentUpon>frmTeleManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrangChu.resx">
+      <DependentUpon>frmTrangChu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -127,6 +139,24 @@
       <Project>{3837ba10-2fa5-40c0-a165-9fc772babf4c}</Project>
       <Name>Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rectangle-metallic-silver-vinyl-printed-labels-stickers-1_1024x1024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-PA-background-web.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aqua-button-hi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnsilver.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDangNhap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rectangle-metallic-silver-vinyl-printed-labels-stickers-1_1024x10241.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
