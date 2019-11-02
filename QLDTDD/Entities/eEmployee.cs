@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Runtime.Serialization;
+using System.ServiceModel;
 namespace Entities
 {
+    [DataContract]
     public class eEmployee
     {
         private int empID;
@@ -16,12 +18,19 @@ namespace Entities
         private string position;
         private int accId;
 
+        [DataMember]
         public int EmpID { get => empID; set => empID = value; }
+        [DataMember]
         public string Name { get => name; set => name = value; }
+        [DataMember]
         public string Address { get => address; set => address = value; }
+        [DataMember]
         public string Phone { get => phone; set => phone = value; }
+        [DataMember]
         public string State { get => state; set => state = value; }
+        [DataMember]
         public int AccId { get => accId; set => accId = value; }
+        [DataMember]
         public string Position { get => position; set => position = value; }
 
         public eEmployee()
