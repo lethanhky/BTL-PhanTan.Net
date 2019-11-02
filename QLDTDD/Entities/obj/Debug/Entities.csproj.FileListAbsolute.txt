@@ -4,3 +4,9 @@ D:\PhanTan\BTL_PhanTan\QLDTDD\Entities\obj\Debug\Entities.csprojAssemblyReferenc
 D:\PhanTan\BTL_PhanTan\QLDTDD\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
 D:\PhanTan\BTL_PhanTan\QLDTDD\Entities\obj\Debug\Entities.dll
 D:\PhanTan\BTL_PhanTan\QLDTDD\Entities\obj\Debug\Entities.pdb
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\Entities\bin\Debug\Entities.dll
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\Entities\bin\Debug\Entities.pdb
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\Entities\obj\Debug\Entities.csprojAssemblyReference.cache
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\Entities\obj\Debug\Entities.dll
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\Entities\obj\Debug\Entities.pdb

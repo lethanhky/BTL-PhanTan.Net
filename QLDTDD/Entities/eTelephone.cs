@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
+using System.ServiceModel;
 
 namespace Entities
 {
@@ -15,11 +17,17 @@ namespace Entities
         private string provider;
         private string state;
 
+        [DataMember]
         public int TeleID { get => teleID; set => teleID = value; }
+        [DataMember]
         public string Name { get => name; set => name = value; }
+        [DataMember]
         public double Price { get => price; set => price = value; }
+        [DataMember]
         public string Provider { get => provider; set => provider = value; }
+        [DataMember]
         public string State { get => state; set => state = value; }
+        [DataMember]
         public int ImpdetailID { get => impdetailID; set => impdetailID = value; }
 
         public eTelephone()
