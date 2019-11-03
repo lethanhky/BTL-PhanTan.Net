@@ -85,6 +85,7 @@
             this.btnSave.TabIndex = 13;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtIPID
             // 
@@ -121,6 +122,7 @@
             this.btnEdit.TabIndex = 8;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // txtState
             // 
@@ -210,6 +212,7 @@
             this.txtSearch.Size = new System.Drawing.Size(337, 26);
             this.txtSearch.TabIndex = 30;
             this.txtSearch.UseWaitCursor = true;
+            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
             // 
             // groupBox1
             // 
@@ -233,6 +236,7 @@
             this.dgvTele.ReadOnly = true;
             this.dgvTele.Size = new System.Drawing.Size(468, 281);
             this.dgvTele.TabIndex = 0;
+            this.dgvTele.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvTele_RowStateChanged);
             // 
             // frmTeleManager
             // 

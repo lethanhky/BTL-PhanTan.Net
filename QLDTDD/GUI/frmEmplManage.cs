@@ -86,7 +86,6 @@ namespace GUI
             List<eEmployee> le = qldtdd.searchEmployee(txtSearch.Text.TrimEnd()).ToList();
             dgvEm.DataSource = le;
         }
-
         private void btnEdit_Click(object sender, EventArgs e)
         {
             try {

@@ -35,3 +35,4 @@ D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cac
 D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.csproj.CopyComplete
 D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.exe
 D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.pdb
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
