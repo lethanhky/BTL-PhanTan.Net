@@ -36,3 +36,6 @@ D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.csproj.CopyComplete
 D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.exe
 D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.pdb
 D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.frmCreateOrder.resources
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\bin\Debug\Entities.dll
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\bin\Debug\Entities.pdb

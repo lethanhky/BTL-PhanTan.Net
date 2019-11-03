@@ -55,6 +55,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="frmCreateOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateOrder.Designer.cs">
+      <DependentUpon>frmCreateOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEmplManage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDTDDDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmCreateOrder.resx">
+      <DependentUpon>frmCreateOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEmplManage.resx">
       <DependentUpon>frmEmplManage.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +145,7 @@
     <None Include="Connected Services\QLDTDDClient\service1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Entities.eTelephone1.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -166,6 +176,10 @@
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{7f6ae74f-e673-4df8-93f2-410adb96a583}</Project>
       <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{3837ba10-2fa5-40c0-a165-9fc772babf4c}</Project>
+      <Name>Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

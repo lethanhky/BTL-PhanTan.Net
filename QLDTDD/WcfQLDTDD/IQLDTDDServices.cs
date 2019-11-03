@@ -81,12 +81,22 @@ namespace WcfQLDTDD
         int updatePhone(eTelephone tele);
         [OperationContract]
         bool CheckIfExistTele(int teleID);
+        [OperationContract]
+        eTelephone GetETelephoneByName(string name);
         #endregion
 
         //Dung chung
         #region
         [OperationContract]
         string ConvertToUnSign(string input);
+        #endregion
+
+        // Thống kê
+        #region
+        [OperationContract]
+        int LayTheoSLB(int month, int year);
+        [OperationContract]
+        Double ThongKeTheoTTB(int month, int year);
         #endregion
     }
 

@@ -139,11 +139,29 @@
   <wsdl:message name="IQLDTDDServices_CheckIfExistTele_OutputMessage">
     <wsdl:part name="parameters" element="tns:CheckIfExistTeleResponse" />
   </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_GetETelephoneByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetETelephoneByName" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_GetETelephoneByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetETelephoneByNameResponse" />
+  </wsdl:message>
   <wsdl:message name="IQLDTDDServices_ConvertToUnSign_InputMessage">
     <wsdl:part name="parameters" element="tns:ConvertToUnSign" />
   </wsdl:message>
   <wsdl:message name="IQLDTDDServices_ConvertToUnSign_OutputMessage">
     <wsdl:part name="parameters" element="tns:ConvertToUnSignResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_LayTheoSLB_InputMessage">
+    <wsdl:part name="parameters" element="tns:LayTheoSLB" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_LayTheoSLB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LayTheoSLBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_ThongKeTheoTTB_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThongKeTheoTTB" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_ThongKeTheoTTB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThongKeTheoTTBResponse" />
   </wsdl:message>
   <wsdl:portType name="IQLDTDDServices">
     <wsdl:operation name="InsertAccount">
@@ -234,9 +252,21 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/CheckIfExistTele" message="tns:IQLDTDDServices_CheckIfExistTele_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/CheckIfExistTeleResponse" message="tns:IQLDTDDServices_CheckIfExistTele_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetETelephoneByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/GetETelephoneByName" message="tns:IQLDTDDServices_GetETelephoneByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/GetETelephoneByNameResponse" message="tns:IQLDTDDServices_GetETelephoneByName_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="ConvertToUnSign">
       <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/ConvertToUnSign" message="tns:IQLDTDDServices_ConvertToUnSign_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/ConvertToUnSignResponse" message="tns:IQLDTDDServices_ConvertToUnSign_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LayTheoSLB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/LayTheoSLB" message="tns:IQLDTDDServices_LayTheoSLB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/LayTheoSLBResponse" message="tns:IQLDTDDServices_LayTheoSLB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThongKeTheoTTB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/ThongKeTheoTTB" message="tns:IQLDTDDServices_ThongKeTheoTTB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/ThongKeTheoTTBResponse" message="tns:IQLDTDDServices_ThongKeTheoTTB_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IQLDTDDServices" type="tns:IQLDTDDServices">
@@ -439,8 +469,35 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetETelephoneByName">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/GetETelephoneByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="ConvertToUnSign">
       <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/ConvertToUnSign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayTheoSLB">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/LayTheoSLB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThongKeTheoTTB">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/ThongKeTheoTTB" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
