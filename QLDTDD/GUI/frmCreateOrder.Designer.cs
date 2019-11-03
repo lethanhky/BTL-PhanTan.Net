@@ -79,6 +79,7 @@
             this.cbxTeleName.Size = new System.Drawing.Size(123, 21);
             this.cbxTeleName.TabIndex = 26;
             this.cbxTeleName.ValueMember = "Name";
+            this.cbxTeleName.SelectedIndexChanged += new System.EventHandler(this.cbxTeleName_SelectedIndexChanged);
             // 
             // telephoneBindingSource
             // 
@@ -92,6 +93,7 @@
             this.btnAdd.TabIndex = 25;
             this.btnAdd.Text = "Thêm vào hoá đơn";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtIPID
             // 
@@ -143,6 +145,7 @@
             this.btnThanhToan.TabIndex = 22;
             this.btnThanhToan.Text = "Thanh toán";
             this.btnThanhToan.UseVisualStyleBackColor = true;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // txtStateOrder
             // 

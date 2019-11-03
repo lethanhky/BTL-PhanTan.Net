@@ -237,7 +237,7 @@ namespace WcfQLDTDD
 
         //Order Detail
         #region
-        
+
         public List<eOrderDetail> GetAllOrderDetails()
         {
             var lsi = db.OrderDetails.ToList();

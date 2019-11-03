@@ -86,30 +86,16 @@ namespace GUI
             o.Total = double.Parse(txtTotal.Text.Trim());
             o.State = "Moi lap";
             qldtdd.InsertOrder(o);
-                MessageBox.Show("Thanh toán thành công");
-                for (int i = 0; i <= dgvImpDetail.Rows.Count - 1; i++)
-                {
-                    //eOrderDetail cthd = new eOrderDetail();
-                    //cthd.MaHoaDon = txtMaHoaDon.Text.Trim();
-                    //cthd.MaHopDong = dgvCTHD.Rows[i].Cells["MaHopDong"].Value.ToString().Trim();
-                    //cthd.MaXe = dgvCTHD.Rows[i].Cells["MaXe"].Value.ToString().Trim();
-                    //cthd.TenXe = dgvCTHD.Rows[i].Cells["TenXe"].Value.ToString();
-                    //cthd.Gia = double.Parse(dgvCTHD.Rows[i].Cells["Gia"].Value.ToString());
-                    //cthd.TienTT = double.Parse(dgvCTHD.Rows[i].Cells["TienTT"].Value.ToString());
-
-                    //int a = cthdbll.ThemCTHD(cthd);
-
-                    //if (a == 1)
-                    //{
-                    //    xebll.CapNhatTTXe(cthd.MaXe.Trim(), false);
-
-                    //}
-
-                    //else
-                    //{
-                    //    hdongbll.CapNhatTTHDong(cthd.MaHopDong = dgvCTHD.Rows[i].Cells["MaHopDong"].Value.ToString(), "Đã hủy");
-                    //}
-                    
+            MessageBox.Show("Thanh toán thành công");
+            for (int i = 0; i <= dgvImpDetail.Rows.Count - 1; i++)
+            {
+                eOrderDetail cthd = new eOrderDetail();
+                cthd.OrderID = o.OrderID;
+                //cthd.Amount = double.Parse(dgvImpDetail.Rows[i].Cells["amount"].Value.ToString().Trim());
+                //cthd.Unitprice = double.Parse(dgvImpDetail.Rows[i].Cells["unitprice"].Value.ToString().Trim());
+                //cthd.TeleID = int.Parse(dgvImpDetail.Rows[i].Cells["teleID"].Value.ToString());
+                //qldtdd.InsertOrderDetail(cthd);
+                MessageBox.Show("a" + o.OrderID);
             }
 
         }
