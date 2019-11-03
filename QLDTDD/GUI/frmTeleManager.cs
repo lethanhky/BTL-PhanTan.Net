@@ -102,12 +102,7 @@ namespace GUI
 
         private void dgvTele_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int a = this.dgvTele.CurrentCell.RowIndex;
-            this.dgvTele.Rows[a].Selected = true;
-            if(dgvTele.Enabled==false)
-            {
-                MessageBox.Show("Please save");
-            }
+
         }
 
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)

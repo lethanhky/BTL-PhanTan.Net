@@ -959,6 +959,18 @@ namespace GUI.QLDTDDClient {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLDTDDServices/ConvertToUnSign", ReplyAction="http://tempuri.org/IQLDTDDServices/ConvertToUnSignResponse")]
         System.Threading.Tasks.Task<string> ConvertToUnSignAsync(string input);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLDTDDServices/LayTheoSLB", ReplyAction="http://tempuri.org/IQLDTDDServices/LayTheoSLBResponse")]
+        int LayTheoSLB(int month, int year);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLDTDDServices/LayTheoSLB", ReplyAction="http://tempuri.org/IQLDTDDServices/LayTheoSLBResponse")]
+        System.Threading.Tasks.Task<int> LayTheoSLBAsync(int month, int year);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLDTDDServices/ThongKeTheoTTB", ReplyAction="http://tempuri.org/IQLDTDDServices/ThongKeTheoTTBResponse")]
+        double ThongKeTheoTTB(int month, int year);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLDTDDServices/ThongKeTheoTTB", ReplyAction="http://tempuri.org/IQLDTDDServices/ThongKeTheoTTBResponse")]
+        System.Threading.Tasks.Task<double> ThongKeTheoTTBAsync(int month, int year);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1162,6 +1174,22 @@ namespace GUI.QLDTDDClient {
         
         public System.Threading.Tasks.Task<string> ConvertToUnSignAsync(string input) {
             return base.Channel.ConvertToUnSignAsync(input);
+        }
+        
+        public int LayTheoSLB(int month, int year) {
+            return base.Channel.LayTheoSLB(month, year);
+        }
+        
+        public System.Threading.Tasks.Task<int> LayTheoSLBAsync(int month, int year) {
+            return base.Channel.LayTheoSLBAsync(month, year);
+        }
+        
+        public double ThongKeTheoTTB(int month, int year) {
+            return base.Channel.ThongKeTheoTTB(month, year);
+        }
+        
+        public System.Threading.Tasks.Task<double> ThongKeTheoTTBAsync(int month, int year) {
+            return base.Channel.ThongKeTheoTTBAsync(month, year);
         }
     }
 }

@@ -353,7 +353,47 @@ namespace WcfQLDTDD
             }
             return str2;
         }
+        #endregion
+
+        //Thống kê
+        #region
+        public int LayTheoSLB(int month, int year)
+        { 
+                var odlist = (from s in db.Orders
+                              where s.orderDate.Value.Month == month && s.orderDate.Value.Year == year
+                              select s ).ToList();
+                List<eOrder> lOrder = new List<eOrder>();
+                foreach (Order o in odlist)
+                {
+                    eOrder t = new eOrder();
+                    t.OrderID = o.orderID;
+                    t.OrderDate = (DateTime)o.orderDate;
+                    t.State = o.state;
+                    t.Total = (Double)o.total;
+                    t.CusName = o.cusName;
+                t.EmpName = o.empName;
+                t.EmpID = (int)o.empID;
+                    lOrder.Add(t);
+                }
+                return lOrder.Count ;
         
+        }
+
+        public Double ThongKeTheoTTB(int month, int year)
+        {
+            var odlist = (from s in db.Orders
+                          where s.orderDate.Value.Month == month && s.orderDate.Value.Year == year
+                          select s).ToList();
+            List<eOrder> lOrder = new List<eOrder>();
+            Double tt = 0;
+            foreach (Order o in odlist)
+            {
+                tt += (Double)o.total;
+            }
+            return tt;
+
+        }
+
         #endregion
     }
 }

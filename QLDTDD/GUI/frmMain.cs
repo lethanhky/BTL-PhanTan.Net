@@ -58,7 +58,9 @@ namespace GUI
 
         private void TKMenuItem_Click(object sender, EventArgs e)
         {
-
+            PanelParent.Controls.Clear();
+            frmThongKe frm = new frmThongKe(PanelParent, this);
+            ShowForm(frm);
         }
 
         private void QLNVMenuItem_MouseHover(object sender, EventArgs e)

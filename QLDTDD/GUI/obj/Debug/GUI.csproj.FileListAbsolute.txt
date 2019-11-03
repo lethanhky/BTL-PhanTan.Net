@@ -23,11 +23,8 @@ D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\bin\Debug\GUI.exe.config
 D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\bin\Debug\GUI.exe
 D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\bin\Debug\GUI.pdb
 D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\bin\Debug\DAL.dll
-D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\bin\Debug\Entities.dll
 D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\bin\Debug\DAL.pdb
 D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\bin\Debug\DAL.dll.config
-D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\bin\Debug\Entities.pdb
-D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
 D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.frmEmplManage.resources
 D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.frmMenu.resources
 D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.frmTeleManager.resources
@@ -38,6 +35,7 @@ D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cac
 D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.csproj.CopyComplete
 D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.exe
 D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.pdb
+<<<<<<< HEAD
 C:\Users\Admin\Documents\BTL-PhanTan.Net\QLDTDD\GUI\bin\Debug\GUI.exe.config
 C:\Users\Admin\Documents\BTL-PhanTan.Net\QLDTDD\GUI\bin\Debug\GUI.exe
 C:\Users\Admin\Documents\BTL-PhanTan.Net\QLDTDD\GUI\bin\Debug\GUI.pdb
@@ -57,3 +55,7 @@ C:\Users\Admin\Documents\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.csproj.CoreCom
 C:\Users\Admin\Documents\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\Admin\Documents\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.exe
 C:\Users\Admin\Documents\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.pdb
+=======
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+>>>>>>> a46239028f84f86aa6bf1423f145b923a4be6c34
+C:\Users\Admin\Documents\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.frmThongKe.resources

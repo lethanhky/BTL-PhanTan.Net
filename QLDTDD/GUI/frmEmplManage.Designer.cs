@@ -117,6 +117,7 @@
             this.btnNewAc.TabIndex = 21;
             this.btnNewAc.Text = "New Account";
             this.btnNewAc.UseVisualStyleBackColor = true;
+            this.btnNewAc.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblaccId
             // 
@@ -137,6 +138,7 @@
             this.btnDelete.TabIndex = 19;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnSave
             // 
@@ -147,6 +149,7 @@
             this.btnSave.TabIndex = 18;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtAccId
             // 
@@ -216,6 +219,7 @@
             this.btnEdit.TabIndex = 9;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnInsert
             // 
@@ -226,6 +230,7 @@
             this.btnInsert.TabIndex = 8;
             this.btnInsert.Text = "Insert";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // label4
             // 
@@ -286,6 +291,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(317, 26);
             this.txtSearch.TabIndex = 29;
+            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
             // 
             // grpDS
             // 
@@ -339,6 +345,7 @@
             this.btnSaveAcc.TabIndex = 26;
             this.btnSaveAcc.Text = "Save Account";
             this.btnSaveAcc.UseVisualStyleBackColor = true;
+            this.btnSaveAcc.Click += new System.EventHandler(this.btnSaveAcc_Click);
             // 
             // lblusername
             // 
@@ -381,6 +388,7 @@
             this.dgvEm.ReadOnly = true;
             this.dgvEm.Size = new System.Drawing.Size(471, 279);
             this.dgvEm.TabIndex = 0;
+            this.dgvEm.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvEm_RowStateChanged);
             // 
             // frmEmplManage
             // 

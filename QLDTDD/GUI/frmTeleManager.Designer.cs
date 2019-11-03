@@ -69,9 +69,11 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(5, 2);
+            this.groupBox2.Location = new System.Drawing.Point(8, 3);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(250, 369);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Size = new System.Drawing.Size(375, 568);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin điện thoại";
@@ -79,35 +81,40 @@
             // btnSave
             // 
             this.btnSave.ForeColor = System.Drawing.Color.DarkViolet;
-            this.btnSave.Location = new System.Drawing.Point(87, 315);
+            this.btnSave.Location = new System.Drawing.Point(130, 485);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(61, 34);
+            this.btnSave.Size = new System.Drawing.Size(92, 52);
             this.btnSave.TabIndex = 13;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtIPID
             // 
-            this.txtIPID.Location = new System.Drawing.Point(99, 244);
+            this.txtIPID.Location = new System.Drawing.Point(148, 375);
+            this.txtIPID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIPID.Name = "txtIPID";
             this.txtIPID.ReadOnly = true;
-            this.txtIPID.Size = new System.Drawing.Size(123, 23);
+            this.txtIPID.Size = new System.Drawing.Size(182, 30);
             this.txtIPID.TabIndex = 12;
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(99, 38);
+            this.txtID.Location = new System.Drawing.Point(148, 58);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(123, 23);
+            this.txtID.Size = new System.Drawing.Size(182, 30);
             this.txtID.TabIndex = 11;
             // 
             // btnDelete
             // 
             this.btnDelete.ForeColor = System.Drawing.Color.DarkViolet;
-            this.btnDelete.Location = new System.Drawing.Point(161, 315);
+            this.btnDelete.Location = new System.Drawing.Point(242, 485);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(61, 34);
+            this.btnDelete.Size = new System.Drawing.Size(92, 52);
             this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -115,48 +122,55 @@
             // btnEdit
             // 
             this.btnEdit.ForeColor = System.Drawing.Color.DarkViolet;
-            this.btnEdit.Location = new System.Drawing.Point(13, 315);
+            this.btnEdit.Location = new System.Drawing.Point(20, 485);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(61, 34);
+            this.btnEdit.Size = new System.Drawing.Size(92, 52);
             this.btnEdit.TabIndex = 8;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // txtState
             // 
-            this.txtState.Location = new System.Drawing.Point(99, 202);
+            this.txtState.Location = new System.Drawing.Point(148, 311);
+            this.txtState.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtState.Name = "txtState";
-            this.txtState.Size = new System.Drawing.Size(123, 23);
+            this.txtState.Size = new System.Drawing.Size(182, 30);
             this.txtState.TabIndex = 7;
             // 
             // txtProvider
             // 
-            this.txtProvider.Location = new System.Drawing.Point(99, 156);
+            this.txtProvider.Location = new System.Drawing.Point(148, 240);
+            this.txtProvider.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtProvider.Name = "txtProvider";
-            this.txtProvider.Size = new System.Drawing.Size(123, 23);
+            this.txtProvider.Size = new System.Drawing.Size(182, 30);
             this.txtProvider.TabIndex = 6;
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(99, 116);
+            this.txtPrice.Location = new System.Drawing.Point(148, 178);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(123, 23);
+            this.txtPrice.Size = new System.Drawing.Size(182, 30);
             this.txtPrice.TabIndex = 5;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(99, 77);
+            this.txtName.Location = new System.Drawing.Point(148, 118);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(123, 23);
+            this.txtName.Size = new System.Drawing.Size(182, 30);
             this.txtName.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(19, 205);
+            this.label4.Location = new System.Drawing.Point(28, 315);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 16);
+            this.label4.Size = new System.Drawing.Size(64, 23);
             this.label4.TabIndex = 3;
             this.label4.Text = "State : ";
             // 
@@ -164,9 +178,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(19, 164);
+            this.label3.Location = new System.Drawing.Point(28, 252);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 16);
+            this.label3.Size = new System.Drawing.Size(90, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "Provider : ";
             // 
@@ -174,9 +189,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(19, 123);
+            this.label2.Location = new System.Drawing.Point(28, 189);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 16);
+            this.label2.Size = new System.Drawing.Size(61, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Price : ";
             // 
@@ -184,9 +200,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(19, 82);
+            this.label1.Location = new System.Drawing.Point(28, 126);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 16);
+            this.label1.Size = new System.Drawing.Size(71, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name : ";
             // 
@@ -196,29 +213,34 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Snow;
-            this.label6.Location = new System.Drawing.Point(291, 25);
+            this.label6.Location = new System.Drawing.Point(436, 38);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 16);
+            this.label6.Size = new System.Drawing.Size(91, 25);
             this.label6.TabIndex = 31;
             this.label6.Text = "Search : ";
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(358, 21);
+            this.txtSearch.Location = new System.Drawing.Point(537, 32);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(337, 26);
+            this.txtSearch.Size = new System.Drawing.Size(504, 38);
             this.txtSearch.TabIndex = 30;
             this.txtSearch.UseWaitCursor = true;
+            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.dgvTele);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(261, 68);
+            this.groupBox1.Location = new System.Drawing.Point(392, 105);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(474, 303);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(711, 466);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách điện thoại";
@@ -227,24 +249,28 @@
             // 
             this.dgvTele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTele.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvTele.Location = new System.Drawing.Point(3, 19);
+            this.dgvTele.Location = new System.Drawing.Point(4, 28);
+            this.dgvTele.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvTele.MultiSelect = false;
             this.dgvTele.Name = "dgvTele";
             this.dgvTele.ReadOnly = true;
-            this.dgvTele.Size = new System.Drawing.Size(468, 281);
+            this.dgvTele.Size = new System.Drawing.Size(703, 433);
             this.dgvTele.TabIndex = 0;
+            this.dgvTele.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTele_CellClick);
+            this.dgvTele.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvTele_RowStateChanged);
             // 
             // frmTeleManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GUI.Properties.Resources.new_PA_background_web;
-            this.ClientSize = new System.Drawing.Size(733, 372);
+            this.ClientSize = new System.Drawing.Size(1100, 572);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.txtSearch);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmTeleManager";
             this.Text = "Telephone Manage";
             this.Load += new System.EventHandler(this.frmTeleManager_Load);

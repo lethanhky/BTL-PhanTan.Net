@@ -86,6 +86,13 @@ namespace WcfQLDTDD
         [OperationContract]
         string ConvertToUnSign(string input);
         #endregion
+        // Thống kê
+        #region
+        [OperationContract]
+        int LayTheoSLB(int month, int year);
+        [OperationContract]
+        Double ThongKeTheoTTB(int month, int year);
+        #endregion
     }
 
 }
