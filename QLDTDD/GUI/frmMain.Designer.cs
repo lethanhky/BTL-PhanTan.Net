@@ -47,7 +47,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::GUI.Properties.Resources.new_PA_background_web;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.PanelParent);
             this.panel1.Controls.Add(this.panel2);
@@ -88,7 +87,6 @@
             this.menuStrip1.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.menuStrip1.AutoSize = false;
             this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.menuStrip1.BackgroundImage = global::GUI.Properties.Resources.new_PA_background_web;
             this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -107,7 +105,7 @@
             // 
             this.TrangChuMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.TrangChuMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TrangChuMenuItem.ForeColor = System.Drawing.Color.White;
+            this.TrangChuMenuItem.ForeColor = System.Drawing.Color.Black;
             this.TrangChuMenuItem.Name = "TrangChuMenuItem";
             this.TrangChuMenuItem.Size = new System.Drawing.Size(91, 24);
             this.TrangChuMenuItem.Text = "Trang Chủ";
@@ -117,7 +115,7 @@
             // 
             this.LapHoaDonMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.LapHoaDonMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LapHoaDonMenuItem.ForeColor = System.Drawing.Color.White;
+            this.LapHoaDonMenuItem.ForeColor = System.Drawing.Color.Black;
             this.LapHoaDonMenuItem.Name = "LapHoaDonMenuItem";
             this.LapHoaDonMenuItem.Size = new System.Drawing.Size(110, 24);
             this.LapHoaDonMenuItem.Text = "Lập Hoá Đơn";
@@ -127,7 +125,7 @@
             // 
             this.QLNVMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.QLNVMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QLNVMenuItem.ForeColor = System.Drawing.Color.White;
+            this.QLNVMenuItem.ForeColor = System.Drawing.Color.Black;
             this.QLNVMenuItem.Name = "QLNVMenuItem";
             this.QLNVMenuItem.Size = new System.Drawing.Size(154, 24);
             this.QLNVMenuItem.Text = "Quản Lý Nhân Viên";
@@ -137,7 +135,7 @@
             // 
             this.QLSPMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.QLSPMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QLSPMenuItem.ForeColor = System.Drawing.Color.White;
+            this.QLSPMenuItem.ForeColor = System.Drawing.Color.Black;
             this.QLSPMenuItem.Name = "QLSPMenuItem";
             this.QLSPMenuItem.Size = new System.Drawing.Size(149, 24);
             this.QLSPMenuItem.Text = "Quản Lý Sản Phẩm";
@@ -147,7 +145,7 @@
             // 
             this.TKMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.TKMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TKMenuItem.ForeColor = System.Drawing.Color.White;
+            this.TKMenuItem.ForeColor = System.Drawing.Color.Black;
             this.TKMenuItem.Name = "TKMenuItem";
             this.TKMenuItem.Size = new System.Drawing.Size(86, 24);
             this.TKMenuItem.Text = "Thống Kê";
@@ -163,7 +161,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Quản Lý Điện Thoại Di Động";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

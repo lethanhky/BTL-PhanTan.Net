@@ -19,6 +19,8 @@ namespace WcfQLDTDD
         string getAccidbyUsername(string username);
         [OperationContract]
         bool CheckIsExistAccount(int accid);
+        [OperationContract]
+        void DeleteAccount(int accid);
         #endregion
 
         //Employee

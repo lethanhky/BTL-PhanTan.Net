@@ -49,7 +49,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::GUI.Properties.Resources.new_PA_background_web;
             this.ClientSize = new System.Drawing.Size(733, 372);
             this.Controls.Add(this.btnDangNhap);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

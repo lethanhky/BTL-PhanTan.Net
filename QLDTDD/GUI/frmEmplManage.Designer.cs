@@ -110,7 +110,7 @@
             // 
             // btnNewAc
             // 
-            this.btnNewAc.ForeColor = System.Drawing.Color.DarkMagenta;
+            this.btnNewAc.ForeColor = System.Drawing.Color.Black;
             this.btnNewAc.Location = new System.Drawing.Point(62, 273);
             this.btnNewAc.Name = "btnNewAc";
             this.btnNewAc.Size = new System.Drawing.Size(124, 31);
@@ -122,7 +122,7 @@
             // lblaccId
             // 
             this.lblaccId.AutoSize = true;
-            this.lblaccId.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblaccId.ForeColor = System.Drawing.Color.Black;
             this.lblaccId.Location = new System.Drawing.Point(12, 279);
             this.lblaccId.Name = "lblaccId";
             this.lblaccId.Size = new System.Drawing.Size(71, 16);
@@ -131,7 +131,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.ForeColor = System.Drawing.Color.DarkMagenta;
+            this.btnDelete.ForeColor = System.Drawing.Color.Black;
             this.btnDelete.Location = new System.Drawing.Point(190, 314);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(51, 31);
@@ -142,7 +142,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.ForeColor = System.Drawing.Color.DarkMagenta;
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
             this.btnSave.Location = new System.Drawing.Point(129, 314);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(54, 31);
@@ -168,7 +168,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.Info;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(12, 232);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 16);
@@ -212,7 +212,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.ForeColor = System.Drawing.Color.DarkMagenta;
+            this.btnEdit.ForeColor = System.Drawing.Color.Black;
             this.btnEdit.Location = new System.Drawing.Point(68, 314);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(54, 31);
@@ -223,7 +223,7 @@
             // 
             // btnInsert
             // 
-            this.btnInsert.ForeColor = System.Drawing.Color.DarkMagenta;
+            this.btnInsert.ForeColor = System.Drawing.Color.Black;
             this.btnInsert.Location = new System.Drawing.Point(3, 314);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(58, 31);
@@ -235,7 +235,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.Info;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(12, 185);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 16);
@@ -245,7 +245,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.Info;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(12, 138);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 16);
@@ -255,7 +255,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.Info;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(12, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 16);
@@ -265,7 +265,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.Info;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(12, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 16);
@@ -277,7 +277,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Snow;
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(293, 21);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 16);
@@ -338,7 +338,7 @@
             // 
             // btnSaveAcc
             // 
-            this.btnSaveAcc.ForeColor = System.Drawing.Color.DarkMagenta;
+            this.btnSaveAcc.ForeColor = System.Drawing.Color.Black;
             this.btnSaveAcc.Location = new System.Drawing.Point(197, 177);
             this.btnSaveAcc.Name = "btnSaveAcc";
             this.btnSaveAcc.Size = new System.Drawing.Size(98, 31);
@@ -350,7 +350,7 @@
             // lblusername
             // 
             this.lblusername.AutoSize = true;
-            this.lblusername.ForeColor = System.Drawing.Color.Snow;
+            this.lblusername.ForeColor = System.Drawing.Color.Black;
             this.lblusername.Location = new System.Drawing.Point(119, 83);
             this.lblusername.Name = "lblusername";
             this.lblusername.Size = new System.Drawing.Size(72, 16);
@@ -367,7 +367,7 @@
             // lblpassword
             // 
             this.lblpassword.AutoSize = true;
-            this.lblpassword.ForeColor = System.Drawing.Color.Snow;
+            this.lblpassword.ForeColor = System.Drawing.Color.Black;
             this.lblpassword.Location = new System.Drawing.Point(119, 130);
             this.lblpassword.Name = "lblpassword";
             this.lblpassword.Size = new System.Drawing.Size(66, 16);
@@ -394,7 +394,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::GUI.Properties.Resources.new_PA_background_web;
             this.ClientSize = new System.Drawing.Size(738, 372);
             this.Controls.Add(this.grpDS);
             this.Controls.Add(this.label6);

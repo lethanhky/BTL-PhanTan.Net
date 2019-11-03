@@ -45,6 +45,19 @@ namespace WcfQLDTDD
             Account ac = db.Accounts.Where(x => x.username == username).FirstOrDefault();
             return ac.accID.ToString().TrimEnd();
         }
+        public void DeleteAccount(int accid)
+        {
+            Account ac = db.Accounts.Where(x => x.accID == accid).FirstOrDefault();
+            db.Accounts.DeleteOnSubmit(ac);
+            try
+            {
+                db.SubmitChanges();
+            }
+            catch (Exception a)
+            {
+                Console.WriteLine(a);
+            }
+        }
         #endregion
 
         //Employee

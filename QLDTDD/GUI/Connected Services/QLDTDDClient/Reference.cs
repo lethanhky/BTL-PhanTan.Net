@@ -846,6 +846,12 @@ namespace GUI.QLDTDDClient {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLDTDDServices/CheckIsExistAccount", ReplyAction="http://tempuri.org/IQLDTDDServices/CheckIsExistAccountResponse")]
         System.Threading.Tasks.Task<bool> CheckIsExistAccountAsync(int accid);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLDTDDServices/DeleteAccount", ReplyAction="http://tempuri.org/IQLDTDDServices/DeleteAccountResponse")]
+        void DeleteAccount(int accid);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLDTDDServices/DeleteAccount", ReplyAction="http://tempuri.org/IQLDTDDServices/DeleteAccountResponse")]
+        System.Threading.Tasks.Task DeleteAccountAsync(int accid);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLDTDDServices/getAllEmployee", ReplyAction="http://tempuri.org/IQLDTDDServices/getAllEmployeeResponse")]
         GUI.QLDTDDClient.eEmployee[] getAllEmployee();
         
@@ -1010,6 +1016,14 @@ namespace GUI.QLDTDDClient {
         
         public System.Threading.Tasks.Task<bool> CheckIsExistAccountAsync(int accid) {
             return base.Channel.CheckIsExistAccountAsync(accid);
+        }
+        
+        public void DeleteAccount(int accid) {
+            base.Channel.DeleteAccount(accid);
+        }
+        
+        public System.Threading.Tasks.Task DeleteAccountAsync(int accid) {
+            return base.Channel.DeleteAccountAsync(accid);
         }
         
         public GUI.QLDTDDClient.eEmployee[] getAllEmployee() {

@@ -78,7 +78,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.ForeColor = System.Drawing.Color.DarkViolet;
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
             this.btnSave.Location = new System.Drawing.Point(87, 315);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(61, 34);
@@ -105,7 +105,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.ForeColor = System.Drawing.Color.DarkViolet;
+            this.btnDelete.ForeColor = System.Drawing.Color.Black;
             this.btnDelete.Location = new System.Drawing.Point(161, 315);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(61, 34);
@@ -115,7 +115,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.ForeColor = System.Drawing.Color.DarkViolet;
+            this.btnEdit.ForeColor = System.Drawing.Color.Black;
             this.btnEdit.Location = new System.Drawing.Point(13, 315);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(61, 34);
@@ -155,7 +155,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(19, 205);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 16);
@@ -165,7 +165,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(19, 164);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 16);
@@ -175,7 +175,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(19, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 16);
@@ -185,7 +185,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(19, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 16);
@@ -197,7 +197,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Snow;
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(291, 25);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 16);
@@ -242,7 +242,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::GUI.Properties.Resources.new_PA_background_web;
             this.ClientSize = new System.Drawing.Size(733, 372);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label6);

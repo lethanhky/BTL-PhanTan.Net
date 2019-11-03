@@ -229,8 +229,8 @@ namespace GUI
                 this.btnDelete.Enabled = true;
                 this.btnNewAc.Visible = false;
                 this.lblnote.Visible = false;
-                this.dgvEm.Visible = true;
-                grpNewAc.Visible = false;
+                this.txtAccId.Visible = false;
+                qldtdd.DeleteAccount(int.Parse(txtAccId.Text.TrimEnd()));
                 this.btnNewAc.Text = "New Account";
             }
         }
@@ -243,8 +243,6 @@ namespace GUI
                 grpDS.Text = "Danh sách nhân viên ";
                 dgvEm.Visible = true;
                 btnNewAc.Text = "New Account";
-
-
             }
             else if(btnNewAc.Text.TrimEnd() == "New Account")
             {
@@ -278,8 +276,14 @@ namespace GUI
                 this.txtAccId.Visible = true;
                 this.txtAccId.Enabled = false;
                 this.lblnote.Visible = false;
+                this.dgvEm.Visible = true;
+                grpNewAc.Visible = false;
                 txtEnableTrue();
-                returnIndex();
+                this.txtName.Text = "";
+                this.txtPhone.Text = "";
+                this.txtAddress.Text = "";
+                this.txtPosition.Text = "";
+                this.txtState.Text = "";
                 txtAccId.Text = qldtdd.getAccidbyUsername(txtUsername.Text.TrimEnd());
             }
             else
