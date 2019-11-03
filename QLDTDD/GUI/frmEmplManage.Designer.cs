@@ -29,19 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmplManage));
-            this.dgvEm = new System.Windows.Forms.DataGridView();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.grpDS = new System.Windows.Forms.GroupBox();
-            this.grpNewAc = new System.Windows.Forms.GroupBox();
-            this.txtaccountid = new System.Windows.Forms.TextBox();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.btnSaveAcc = new System.Windows.Forms.Button();
-            this.lblusername = new System.Windows.Forms.Label();
-            this.txtPassWord = new System.Windows.Forms.TextBox();
-            this.lblpassword = new System.Windows.Forms.Label();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblnote = new System.Windows.Forms.Label();
             this.btnNewAc = new System.Windows.Forms.Button();
@@ -62,175 +49,22 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tableAdapterManager1 = new GUI.QLDTDDDataSetTableAdapters.TableAdapterManager();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.grpDS = new System.Windows.Forms.GroupBox();
+            this.grpNewAc = new System.Windows.Forms.GroupBox();
+            this.txtaccountid = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.btnSaveAcc = new System.Windows.Forms.Button();
+            this.lblusername = new System.Windows.Forms.Label();
+            this.txtPassWord = new System.Windows.Forms.TextBox();
+            this.lblpassword = new System.Windows.Forms.Label();
+            this.dgvEm = new System.Windows.Forms.DataGridView();
+            this.groupBox2.SuspendLayout();
             this.grpDS.SuspendLayout();
             this.grpNewAc.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEm)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvEm
-            // 
-            this.dgvEm.BackgroundColor = System.Drawing.SystemColors.ButtonShadow;
-            this.dgvEm.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.dgvEm.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.dgvEm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEm.EnableHeadersVisualStyles = false;
-            this.dgvEm.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvEm.Location = new System.Drawing.Point(3, 19);
-            this.dgvEm.Name = "dgvEm";
-            this.dgvEm.ReadOnly = true;
-            this.dgvEm.Size = new System.Drawing.Size(457, 264);
-            this.dgvEm.TabIndex = 0;
-            this.dgvEm.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvEm_RowStateChanged);
-            // 
-            // splitContainer2
-            // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Name = "splitContainer2";
-            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.label6);
-            this.splitContainer2.Panel1.Controls.Add(this.txtSearch);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.grpDS);
-            this.splitContainer2.Size = new System.Drawing.Size(469, 372);
-            this.splitContainer2.SplitterDistance = 76;
-            this.splitContainer2.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Snow;
-            this.label6.Location = new System.Drawing.Point(29, 28);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 16);
-            this.label6.TabIndex = 28;
-            this.label6.Text = "Search : ";
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(96, 23);
-            this.txtSearch.Multiline = true;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(317, 26);
-            this.txtSearch.TabIndex = 10;
-            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
-            // 
-            // grpDS
-            // 
-            this.grpDS.Controls.Add(this.grpNewAc);
-            this.grpDS.Controls.Add(this.dgvEm);
-            this.grpDS.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpDS.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.grpDS.Location = new System.Drawing.Point(3, 3);
-            this.grpDS.Name = "grpDS";
-            this.grpDS.Size = new System.Drawing.Size(463, 286);
-            this.grpDS.TabIndex = 1;
-            this.grpDS.TabStop = false;
-            this.grpDS.Text = "Danh sách nhân viên";
-            // 
-            // grpNewAc
-            // 
-            this.grpNewAc.Controls.Add(this.txtaccountid);
-            this.grpNewAc.Controls.Add(this.txtUsername);
-            this.grpNewAc.Controls.Add(this.btnSaveAcc);
-            this.grpNewAc.Controls.Add(this.lblusername);
-            this.grpNewAc.Controls.Add(this.txtPassWord);
-            this.grpNewAc.Controls.Add(this.lblpassword);
-            this.grpNewAc.Location = new System.Drawing.Point(0, 19);
-            this.grpNewAc.Name = "grpNewAc";
-            this.grpNewAc.Size = new System.Drawing.Size(466, 264);
-            this.grpNewAc.TabIndex = 27;
-            this.grpNewAc.TabStop = false;
-            // 
-            // txtaccountid
-            // 
-            this.txtaccountid.Location = new System.Drawing.Point(195, 41);
-            this.txtaccountid.Name = "txtaccountid";
-            this.txtaccountid.Size = new System.Drawing.Size(138, 23);
-            this.txtaccountid.TabIndex = 27;
-            this.txtaccountid.Visible = false;
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Location = new System.Drawing.Point(195, 80);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(138, 23);
-            this.txtUsername.TabIndex = 24;
-            // 
-            // btnSaveAcc
-            // 
-            this.btnSaveAcc.ForeColor = System.Drawing.Color.DarkMagenta;
-            this.btnSaveAcc.Location = new System.Drawing.Point(197, 177);
-            this.btnSaveAcc.Name = "btnSaveAcc";
-            this.btnSaveAcc.Size = new System.Drawing.Size(98, 31);
-            this.btnSaveAcc.TabIndex = 26;
-            this.btnSaveAcc.Text = "Save Account";
-            this.btnSaveAcc.UseVisualStyleBackColor = true;
-            this.btnSaveAcc.Click += new System.EventHandler(this.btnSaveAcc_Click);
-            // 
-            // lblusername
-            // 
-            this.lblusername.AutoSize = true;
-            this.lblusername.ForeColor = System.Drawing.Color.Snow;
-            this.lblusername.Location = new System.Drawing.Point(119, 83);
-            this.lblusername.Name = "lblusername";
-            this.lblusername.Size = new System.Drawing.Size(72, 16);
-            this.lblusername.TabIndex = 22;
-            this.lblusername.Text = "UserName : ";
-            // 
-            // txtPassWord
-            // 
-            this.txtPassWord.Location = new System.Drawing.Point(195, 126);
-            this.txtPassWord.Name = "txtPassWord";
-            this.txtPassWord.Size = new System.Drawing.Size(138, 23);
-            this.txtPassWord.TabIndex = 25;
-            // 
-            // lblpassword
-            // 
-            this.lblpassword.AutoSize = true;
-            this.lblpassword.ForeColor = System.Drawing.Color.Snow;
-            this.lblpassword.Location = new System.Drawing.Point(119, 130);
-            this.lblpassword.Name = "lblpassword";
-            this.lblpassword.Size = new System.Drawing.Size(66, 16);
-            this.lblpassword.TabIndex = 23;
-            this.lblpassword.Text = "PassWord :";
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer1.BackgroundImage")));
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.splitContainer1.Panel1.Controls.Add(this.groupBox2);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Transparent;
-            this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(733, 372);
-            this.splitContainer1.SplitterDistance = 260;
-            this.splitContainer1.TabIndex = 1;
             // 
             // groupBox2
             // 
@@ -256,10 +90,10 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.groupBox2.Location = new System.Drawing.Point(6, 0);
+            this.groupBox2.Location = new System.Drawing.Point(6, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(251, 369);
-            this.groupBox2.TabIndex = 0;
+            this.groupBox2.Size = new System.Drawing.Size(251, 365);
+            this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin nhân viên";
             // 
@@ -283,7 +117,6 @@
             this.btnNewAc.TabIndex = 21;
             this.btnNewAc.Text = "New Account";
             this.btnNewAc.UseVisualStyleBackColor = true;
-            this.btnNewAc.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblaccId
             // 
@@ -314,7 +147,6 @@
             this.btnSave.TabIndex = 18;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtAccId
             // 
@@ -384,7 +216,6 @@
             this.btnEdit.TabIndex = 9;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnInsert
             // 
@@ -395,7 +226,6 @@
             this.btnInsert.TabIndex = 8;
             this.btnInsert.Text = "Insert";
             this.btnInsert.UseVisualStyleBackColor = true;
-            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // label4
             // 
@@ -437,58 +267,149 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Name : ";
             // 
-            // tableAdapterManager1
+            // label6
             // 
-            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.Connection = null;
-            this.tableAdapterManager1.TelephoneTableAdapter = null;
-            this.tableAdapterManager1.UpdateOrder = GUI.QLDTDDDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Snow;
+            this.label6.Location = new System.Drawing.Point(293, 21);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 16);
+            this.label6.TabIndex = 30;
+            this.label6.Text = "Search : ";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(360, 16);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(317, 26);
+            this.txtSearch.TabIndex = 29;
+            // 
+            // grpDS
+            // 
+            this.grpDS.BackColor = System.Drawing.Color.Transparent;
+            this.grpDS.Controls.Add(this.grpNewAc);
+            this.grpDS.Controls.Add(this.dgvEm);
+            this.grpDS.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpDS.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.grpDS.Location = new System.Drawing.Point(263, 67);
+            this.grpDS.Name = "grpDS";
+            this.grpDS.Size = new System.Drawing.Size(477, 301);
+            this.grpDS.TabIndex = 31;
+            this.grpDS.TabStop = false;
+            this.grpDS.Text = "Danh sách nhân viên";
+            // 
+            // grpNewAc
+            // 
+            this.grpNewAc.Controls.Add(this.txtaccountid);
+            this.grpNewAc.Controls.Add(this.txtUsername);
+            this.grpNewAc.Controls.Add(this.btnSaveAcc);
+            this.grpNewAc.Controls.Add(this.lblusername);
+            this.grpNewAc.Controls.Add(this.txtPassWord);
+            this.grpNewAc.Controls.Add(this.lblpassword);
+            this.grpNewAc.Location = new System.Drawing.Point(0, 19);
+            this.grpNewAc.Name = "grpNewAc";
+            this.grpNewAc.Size = new System.Drawing.Size(477, 282);
+            this.grpNewAc.TabIndex = 27;
+            this.grpNewAc.TabStop = false;
+            // 
+            // txtaccountid
+            // 
+            this.txtaccountid.Location = new System.Drawing.Point(195, 41);
+            this.txtaccountid.Name = "txtaccountid";
+            this.txtaccountid.Size = new System.Drawing.Size(138, 23);
+            this.txtaccountid.TabIndex = 27;
+            this.txtaccountid.Visible = false;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(195, 80);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(138, 23);
+            this.txtUsername.TabIndex = 24;
+            // 
+            // btnSaveAcc
+            // 
+            this.btnSaveAcc.ForeColor = System.Drawing.Color.DarkMagenta;
+            this.btnSaveAcc.Location = new System.Drawing.Point(197, 177);
+            this.btnSaveAcc.Name = "btnSaveAcc";
+            this.btnSaveAcc.Size = new System.Drawing.Size(98, 31);
+            this.btnSaveAcc.TabIndex = 26;
+            this.btnSaveAcc.Text = "Save Account";
+            this.btnSaveAcc.UseVisualStyleBackColor = true;
+            // 
+            // lblusername
+            // 
+            this.lblusername.AutoSize = true;
+            this.lblusername.ForeColor = System.Drawing.Color.Snow;
+            this.lblusername.Location = new System.Drawing.Point(119, 83);
+            this.lblusername.Name = "lblusername";
+            this.lblusername.Size = new System.Drawing.Size(72, 16);
+            this.lblusername.TabIndex = 22;
+            this.lblusername.Text = "UserName : ";
+            // 
+            // txtPassWord
+            // 
+            this.txtPassWord.Location = new System.Drawing.Point(195, 126);
+            this.txtPassWord.Name = "txtPassWord";
+            this.txtPassWord.Size = new System.Drawing.Size(138, 23);
+            this.txtPassWord.TabIndex = 25;
+            // 
+            // lblpassword
+            // 
+            this.lblpassword.AutoSize = true;
+            this.lblpassword.ForeColor = System.Drawing.Color.Snow;
+            this.lblpassword.Location = new System.Drawing.Point(119, 130);
+            this.lblpassword.Name = "lblpassword";
+            this.lblpassword.Size = new System.Drawing.Size(66, 16);
+            this.lblpassword.TabIndex = 23;
+            this.lblpassword.Text = "PassWord :";
+            // 
+            // dgvEm
+            // 
+            this.dgvEm.BackgroundColor = System.Drawing.SystemColors.ButtonShadow;
+            this.dgvEm.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dgvEm.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dgvEm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEm.EnableHeadersVisualStyles = false;
+            this.dgvEm.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dgvEm.Location = new System.Drawing.Point(3, 19);
+            this.dgvEm.Name = "dgvEm";
+            this.dgvEm.ReadOnly = true;
+            this.dgvEm.Size = new System.Drawing.Size(471, 279);
+            this.dgvEm.TabIndex = 0;
             // 
             // frmEmplManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 372);
-            this.Controls.Add(this.splitContainer1);
+            this.BackgroundImage = global::GUI.Properties.Resources.new_PA_background_web;
+            this.ClientSize = new System.Drawing.Size(738, 372);
+            this.Controls.Add(this.grpDS);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.groupBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEmplManage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QLDTDD";
             this.Load += new System.EventHandler(this.frmEmplManage_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEm)).EndInit();
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel1.PerformLayout();
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.grpDS.ResumeLayout(false);
             this.grpNewAc.ResumeLayout(false);
             this.grpNewAc.PerformLayout();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEm)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvEm;
-        private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.GroupBox grpDS;
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.TextBox txtSearch;
-        private QLDTDDDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
-        private System.Windows.Forms.GroupBox grpNewAc;
-        private System.Windows.Forms.TextBox txtaccountid;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Button btnSaveAcc;
-        private System.Windows.Forms.Label lblusername;
-        private System.Windows.Forms.TextBox txtPassWord;
-        private System.Windows.Forms.Label lblpassword;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblnote;
         private System.Windows.Forms.Button btnNewAc;
@@ -510,5 +431,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.GroupBox grpDS;
+        private System.Windows.Forms.GroupBox grpNewAc;
+        private System.Windows.Forms.TextBox txtaccountid;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Button btnSaveAcc;
+        private System.Windows.Forms.Label lblusername;
+        private System.Windows.Forms.TextBox txtPassWord;
+        private System.Windows.Forms.Label lblpassword;
+        private System.Windows.Forms.DataGridView dgvEm;
     }
 }

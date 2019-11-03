@@ -20,21 +20,55 @@ namespace GUI
         private void Form1_Load(object sender, EventArgs e)
         {
             PanelParent.Controls.Clear();
-            frmEmplManage frm = new frmEmplManage(PanelParent, this);
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.TopLevel = false;
-            frm.Dock = DockStyle.Fill;
-            frm.Visible = true;
-            PanelParent.Controls.Add(frm);
+            frmTrangChu frm = new frmTrangChu(PanelParent, this);
+            ShowForm(frm);
         }
         public void ShowForm(Form frm)
         {
-            PanelParent.Controls.Clear();
             frm.FormBorderStyle = FormBorderStyle.None;
             frm.TopLevel = false;
             PanelParent.Controls.Add(frm);
             frm.Dock = DockStyle.Fill;
             frm.Show();
+        }
+
+        private void TrangChuMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LapHoaDonMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void QLNVMenuItem_Click(object sender, EventArgs e)
+        {
+            PanelParent.Controls.Clear();
+            frmEmplManage frm = new frmEmplManage(PanelParent, this);
+            ShowForm(frm);
+        }
+
+        private void QLSPMenuItem_Click(object sender, EventArgs e)
+        {
+            PanelParent.Controls.Clear();
+            frmTeleManager frm = new frmTeleManager(PanelParent, this);
+            ShowForm(frm);
+        }
+
+        private void TKMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void QLNVMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            this. ForeColor = Color.Black;
+        }
+
+        private void TrangChuMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            this.ForeColor = Color.White;
         }
     }
 }

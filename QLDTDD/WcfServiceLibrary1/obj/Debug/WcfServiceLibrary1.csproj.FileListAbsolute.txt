@@ -1,0 +1,6 @@
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\WcfServiceLibrary1\bin\Debug\WcfServiceLibrary1.dll.config
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\WcfServiceLibrary1\bin\Debug\WcfServiceLibrary1.dll
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\WcfServiceLibrary1\bin\Debug\WcfServiceLibrary1.pdb
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\WcfServiceLibrary1\obj\Debug\WcfServiceLibrary1.csproj.CoreCompileInputs.cache
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\WcfServiceLibrary1\obj\Debug\WcfServiceLibrary1.dll
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\WcfServiceLibrary1\obj\Debug\WcfServiceLibrary1.pdb

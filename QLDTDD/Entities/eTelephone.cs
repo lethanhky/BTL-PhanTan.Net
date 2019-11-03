@@ -8,6 +8,7 @@ using System.ServiceModel;
 
 namespace Entities
 {
+    [DataContract]
     public class eTelephone
     {
         private int teleID;

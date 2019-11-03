@@ -4,42 +4,88 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using Entities;
 
 namespace WcfQLDTDD
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
     [ServiceContract]
     public interface IQLDTDDServices
     {
+        //Account
+        #region
         [OperationContract]
-        string GetData(int value);
-
+        int InsertAccount(eAccount ac);
         [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+        string getAccidbyUsername(string username);
+        [OperationContract]
+        bool CheckIsExistAccount(int accid);
+        #endregion
 
-        // TODO: Add your service operations here
+        //Employee
+        #region
+        [OperationContract]
+        List<eEmployee> getAllEmployee();
+        [OperationContract]
+        void inSertEmployee(eEmployee em);
+        [OperationContract]
+        int editEmployee(eEmployee em);
+        [OperationContract]
+        List<eEmployee> searchEmployee(string input);
+        [OperationContract]
+        bool CheckIsExistEmployee(int empid);
+        #endregion
+
+        //Import Coupon
+        #region
+        [OperationContract]
+        List<eImportCoupon> GetAllImportCoupons();
+        [OperationContract]
+        void InsertImportCoupon(eImportCoupon im);
+        #endregion
+
+        //Import Coupon Detail
+        #region
+        [OperationContract]
+        List<eImportCouponDetail> GetAllImportCouponDetails();
+        [OperationContract]
+        void InsertImportCouponDetail(eImportCouponDetail imde);
+        #endregion
+
+        //Order
+        #region
+        [OperationContract]
+        List<eOrder> GetAllOrders();
+        [OperationContract]
+        void InsertOrder(eOrder o);
+        #endregion
+
+        //Order Detail
+        #region
+        [OperationContract]
+        List<eOrderDetail> GetAllOrderDetails();
+        [OperationContract]
+        void InsertOrderDetail(eOrderDetail od);
+        #endregion
+
+        //Telephone
+        #region
+        [OperationContract]
+        List<eTelephone> GetAllTelephone();
+        [OperationContract]
+        List<eTelephone> SearchTelephone(string input);
+        [OperationContract]
+        int insertPhone(eTelephone tele);
+        [OperationContract]
+        int updatePhone(eTelephone tele);
+        [OperationContract]
+        bool CheckIfExistTele(int teleID);
+        #endregion
+
+        //Dung chung
+        #region
+        [OperationContract]
+        string ConvertToUnSign(string input);
+        #endregion
     }
 
-    // Use a data contract as illustrated in the sample below to add composite types to service operations.
-    // You can add XSD files into the project. After building the project, you can directly use the data types defined there, with the namespace "WcfQLDTDD.ContractType".
-    [DataContract]
-    public class CompositeType
-    {
-        bool boolValue = true;
-        string stringValue = "Hello ";
-
-        [DataMember]
-        public bool BoolValue
-        {
-            get { return boolValue; }
-            set { boolValue = value; }
-        }
-
-        [DataMember]
-        public string StringValue
-        {
-            get { return stringValue; }
-            set { stringValue = value; }
-        }
-    }
 }

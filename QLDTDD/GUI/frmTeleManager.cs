@@ -7,24 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BUS;
-using Entities;
+using GUI.QLDTDDClient;
 
 namespace GUI
 {
     public partial class frmTeleManager : Form
     {
-        List<eTelephone> listtele;
-        TelephoneBUS teleBus;
-        public frmTeleManager()
+        QLDTDDServicesClient qldtdd;
+        public frmTeleManager(Panel p, frmMenu frm)
         {
             InitializeComponent();
+            qldtdd = new QLDTDDServicesClient();
         }
         private void frmTeleManager_Load(object sender, EventArgs e)
         {
                 // TODO: This line of code loads data into the 'qLDTDDDataSet.Telephone' table. You can move, or remove it, as needed.
-            teleBus = new TelephoneBUS();
-            listtele = new List<eTelephone>();
             LoadDataGriwView();
             this.txtID.Visible = false;
             this.txtIPID.Visible = false;
@@ -48,7 +45,7 @@ namespace GUI
         }
         private void LoadDataGriwView()
         {
-            List<eTelephone> lstl = teleBus.GetAllTelephone();
+            List<eTelephone> lstl = qldtdd.GetAllTelephone().ToList();
             dgvTele.DataSource = lstl;
         }
         #region
@@ -115,7 +112,7 @@ namespace GUI
 
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)
         {
-            List<eTelephone> le = teleBus.SearchTelephone(txtSearch.Text.TrimEnd());
+            List<eTelephone> le = qldtdd.SearchTelephone(txtSearch.Text.TrimEnd()).ToList();
             dgvTele.DataSource = le;
         }
 
@@ -131,7 +128,7 @@ namespace GUI
                 tele.State = txtState.Text;
                 tele.ImpdetailID = int.Parse(txtIPID.Text);
 
-                int kq = teleBus.updatePhone(tele);
+                int kq = qldtdd.updatePhone(tele);
                 if (kq == 1)
                 {
                     MessageBox.Show("Edit Success !");

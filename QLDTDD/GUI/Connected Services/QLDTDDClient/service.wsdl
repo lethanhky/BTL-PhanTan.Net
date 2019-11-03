@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="QLDTDDServices" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Entities" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IQLDTDDServices_InsertAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAccount" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_InsertAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_getAccidbyUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAccidbyUsername" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_getAccidbyUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAccidbyUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_CheckIsExistAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIsExistAccount" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_CheckIsExistAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIsExistAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_getAllEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_getAllEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_inSertEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:inSertEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_inSertEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:inSertEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_editEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:editEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_editEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_searchEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:searchEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_searchEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:searchEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_CheckIsExistEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIsExistEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_CheckIsExistEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIsExistEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_GetAllImportCoupons_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllImportCoupons" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_GetAllImportCoupons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllImportCouponsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_InsertImportCoupon_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertImportCoupon" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_InsertImportCoupon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertImportCouponResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_GetAllImportCouponDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllImportCouponDetails" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_GetAllImportCouponDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllImportCouponDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_InsertImportCouponDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertImportCouponDetail" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_InsertImportCouponDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertImportCouponDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_GetAllOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOrders" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_GetAllOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_InsertOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOrder" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_InsertOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_GetAllOrderDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOrderDetails" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_GetAllOrderDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOrderDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_InsertOrderDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOrderDetail" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_InsertOrderDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOrderDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_GetAllTelephone_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTelephone" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_GetAllTelephone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTelephoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_SearchTelephone_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTelephone" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_SearchTelephone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTelephoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_insertPhone_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertPhone" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_insertPhone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertPhoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_updatePhone_InputMessage">
+    <wsdl:part name="parameters" element="tns:updatePhone" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_updatePhone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updatePhoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_CheckIfExistTele_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIfExistTele" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_CheckIfExistTele_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIfExistTeleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_ConvertToUnSign_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToUnSign" />
+  </wsdl:message>
+  <wsdl:message name="IQLDTDDServices_ConvertToUnSign_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToUnSignResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IQLDTDDServices">
+    <wsdl:operation name="InsertAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/InsertAccount" message="tns:IQLDTDDServices_InsertAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/InsertAccountResponse" message="tns:IQLDTDDServices_InsertAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAccidbyUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/getAccidbyUsername" message="tns:IQLDTDDServices_getAccidbyUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/getAccidbyUsernameResponse" message="tns:IQLDTDDServices_getAccidbyUsername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckIsExistAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/CheckIsExistAccount" message="tns:IQLDTDDServices_CheckIsExistAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/CheckIsExistAccountResponse" message="tns:IQLDTDDServices_CheckIsExistAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/getAllEmployee" message="tns:IQLDTDDServices_getAllEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/getAllEmployeeResponse" message="tns:IQLDTDDServices_getAllEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="inSertEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/inSertEmployee" message="tns:IQLDTDDServices_inSertEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/inSertEmployeeResponse" message="tns:IQLDTDDServices_inSertEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/editEmployee" message="tns:IQLDTDDServices_editEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/editEmployeeResponse" message="tns:IQLDTDDServices_editEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="searchEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/searchEmployee" message="tns:IQLDTDDServices_searchEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/searchEmployeeResponse" message="tns:IQLDTDDServices_searchEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckIsExistEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/CheckIsExistEmployee" message="tns:IQLDTDDServices_CheckIsExistEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/CheckIsExistEmployeeResponse" message="tns:IQLDTDDServices_CheckIsExistEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllImportCoupons">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/GetAllImportCoupons" message="tns:IQLDTDDServices_GetAllImportCoupons_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/GetAllImportCouponsResponse" message="tns:IQLDTDDServices_GetAllImportCoupons_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertImportCoupon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/InsertImportCoupon" message="tns:IQLDTDDServices_InsertImportCoupon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/InsertImportCouponResponse" message="tns:IQLDTDDServices_InsertImportCoupon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllImportCouponDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/GetAllImportCouponDetails" message="tns:IQLDTDDServices_GetAllImportCouponDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/GetAllImportCouponDetailsResponse" message="tns:IQLDTDDServices_GetAllImportCouponDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertImportCouponDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/InsertImportCouponDetail" message="tns:IQLDTDDServices_InsertImportCouponDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/InsertImportCouponDetailResponse" message="tns:IQLDTDDServices_InsertImportCouponDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/GetAllOrders" message="tns:IQLDTDDServices_GetAllOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/GetAllOrdersResponse" message="tns:IQLDTDDServices_GetAllOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/InsertOrder" message="tns:IQLDTDDServices_InsertOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/InsertOrderResponse" message="tns:IQLDTDDServices_InsertOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrderDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/GetAllOrderDetails" message="tns:IQLDTDDServices_GetAllOrderDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/GetAllOrderDetailsResponse" message="tns:IQLDTDDServices_GetAllOrderDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrderDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/InsertOrderDetail" message="tns:IQLDTDDServices_InsertOrderDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/InsertOrderDetailResponse" message="tns:IQLDTDDServices_InsertOrderDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTelephone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/GetAllTelephone" message="tns:IQLDTDDServices_GetAllTelephone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/GetAllTelephoneResponse" message="tns:IQLDTDDServices_GetAllTelephone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchTelephone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/SearchTelephone" message="tns:IQLDTDDServices_SearchTelephone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/SearchTelephoneResponse" message="tns:IQLDTDDServices_SearchTelephone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertPhone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/insertPhone" message="tns:IQLDTDDServices_insertPhone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/insertPhoneResponse" message="tns:IQLDTDDServices_insertPhone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updatePhone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/updatePhone" message="tns:IQLDTDDServices_updatePhone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/updatePhoneResponse" message="tns:IQLDTDDServices_updatePhone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckIfExistTele">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/CheckIfExistTele" message="tns:IQLDTDDServices_CheckIfExistTele_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/CheckIfExistTeleResponse" message="tns:IQLDTDDServices_CheckIfExistTele_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToUnSign">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLDTDDServices/ConvertToUnSign" message="tns:IQLDTDDServices_ConvertToUnSign_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLDTDDServices/ConvertToUnSignResponse" message="tns:IQLDTDDServices_ConvertToUnSign_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IQLDTDDServices" type="tns:IQLDTDDServices">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertAccount">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/InsertAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccidbyUsername">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/getAccidbyUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckIsExistAccount">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/CheckIsExistAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllEmployee">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/getAllEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inSertEmployee">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/inSertEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editEmployee">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/editEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchEmployee">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/searchEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckIsExistEmployee">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/CheckIsExistEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllImportCoupons">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/GetAllImportCoupons" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertImportCoupon">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/InsertImportCoupon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllImportCouponDetails">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/GetAllImportCouponDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertImportCouponDetail">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/InsertImportCouponDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrders">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/GetAllOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrder">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/InsertOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrderDetails">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/GetAllOrderDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrderDetail">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/InsertOrderDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTelephone">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/GetAllTelephone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchTelephone">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/SearchTelephone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertPhone">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/insertPhone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePhone">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/updatePhone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckIfExistTele">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/CheckIfExistTele" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToUnSign">
+      <soap:operation soapAction="http://tempuri.org/IQLDTDDServices/ConvertToUnSign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QLDTDDServices">
+    <wsdl:port name="BasicHttpBinding_IQLDTDDServices" binding="tns:BasicHttpBinding_IQLDTDDServices">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WcfQLDTDD/QLDTDDServices/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

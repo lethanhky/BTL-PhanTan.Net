@@ -35,7 +35,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,6 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\QLDTDDClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="frmEmplManage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +108,34 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Connected Services\QLDTDDClient\Entities.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\QLDTDDClient\GUI.QLDTDDClient.eEmployee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\QLDTDDClient\GUI.QLDTDDClient.eImportCoupon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\QLDTDDClient\GUI.QLDTDDClient.eImportCouponDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\QLDTDDClient\GUI.QLDTDDClient.eOrder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\QLDTDDClient\GUI.QLDTDDClient.eOrderDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\QLDTDDClient\GUI.QLDTDDClient.eTelephone.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\QLDTDDClient\service.wsdl" />
+    <None Include="Connected Services\QLDTDDClient\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\QLDTDDClient\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -127,17 +163,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BUS\BUS.csproj">
-      <Project>{3e740058-64cf-4a5c-9e8c-f89e50d2cd88}</Project>
-      <Name>BUS</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{7f6ae74f-e673-4df8-93f2-410adb96a583}</Project>
       <Name>DAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Entities\Entities.csproj">
-      <Project>{3837ba10-2fa5-40c0-a165-9fc772babf4c}</Project>
-      <Name>Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -157,6 +185,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\rectangle-metallic-silver-vinyl-printed-labels-stickers-1_1024x10241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\QLDTDDClient\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\QLDTDDClient\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\QLDTDDClient\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\QLDTDDClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

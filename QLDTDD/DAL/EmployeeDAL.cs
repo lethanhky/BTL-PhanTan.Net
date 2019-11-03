@@ -90,7 +90,7 @@ namespace DAL
             }
             return lnv;
         }
-        private string ConvertToUnSign(string input)
+        private string ConvertToUnSign(string input)  
         {
             input = input.Trim();
             for (int i = 0x20; i < 0x30; i++)

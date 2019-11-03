@@ -92,7 +92,7 @@ namespace DAL
             }
             return lt;
         }
-        public bool checkIfExist(int teleID)// kiem tra ton tai
+        public bool CheckIfExistTele(int teleID)// kiem tra ton tai
         {
             Telephone tele = db.Telephones.Where(x => x.teleID == teleID).FirstOrDefault();
             if (tele != null)
@@ -101,7 +101,7 @@ namespace DAL
         }
         public int insertTelephone(eTelephone tele) // them dien thoai moi
         {
-            if (checkIfExist(tele.TeleID))
+            if (CheckIfExistTele(tele.TeleID))
                 return 0;
             Telephone t = new Telephone();
             t.teleID = tele.TeleID;
@@ -117,7 +117,7 @@ namespace DAL
         }
         public int EditTelephone(eTelephone teleold) // Chinh sua thong tin nhan vien
         {
-            if (!checkIfExist(teleold.TeleID))
+            if (!CheckIfExistTele(teleold.TeleID))
                 return 0;
             IQueryable<Telephone> tele = db.Telephones.Where(x => x.teleID == teleold.TeleID);
             tele.First().name = teleold.Name;

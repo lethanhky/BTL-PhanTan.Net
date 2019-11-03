@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
+using System.ServiceModel;
 
 namespace Entities
 {
+    [DataContract]
     public class eImportCoupon
     {
         private int impID;
@@ -13,9 +16,13 @@ namespace Entities
         private int empID;
         private double total;
 
+        [DataMember]
         public int ImpID { get => impID; set => impID = value; }
+        [DataMember]
         public DateTime ImpdetailDate { get => impdetailDate; set => impdetailDate = value; }
+        [DataMember]
         public int EmpID { get => empID; set => empID = value; }
+        [DataMember]
         public double Total { get => total; set => total = value; }
 
         public eImportCoupon()

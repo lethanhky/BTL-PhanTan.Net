@@ -1,0 +1,2 @@
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\WcfQLDTDDD\obj\Debug\WcfQLDTDDD.csprojAssemblyReference.cache
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\WcfQLDTDDD\obj\Debug\WcfQLDTDDD.csproj.CoreCompileInputs.cache

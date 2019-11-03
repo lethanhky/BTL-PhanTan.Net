@@ -10,3 +10,15 @@ D:\PhanTan\BTL_PhanTan\QLDTDD\BUS\bin\Debug\DAL.pdb
 D:\PhanTan\BTL_PhanTan\QLDTDD\BUS\bin\Debug\DAL.dll.config
 D:\PhanTan\BTL_PhanTan\QLDTDD\BUS\bin\Debug\Entities.pdb
 D:\PhanTan\BTL_PhanTan\QLDTDD\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\BUS\bin\Debug\BUS.dll
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\BUS\bin\Debug\BUS.pdb
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\BUS\bin\Debug\DAL.dll
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\BUS\bin\Debug\Entities.dll
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\BUS\bin\Debug\DAL.pdb
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\BUS\bin\Debug\DAL.dll.config
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\BUS\bin\Debug\Entities.pdb
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\BUS\obj\Debug\BUS.dll
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\BUS\obj\Debug\BUS.pdb

@@ -7,28 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BUS;
-using Entities;
+using GUI.QLDTDDClient;
 
 namespace GUI
 {
     public partial class frmEmplManage : Form
     {
+        QLDTDDServicesClient qldtdd;
+
         frmMenu tc = null;
         List<eEmployee> lsem;
-        EmployeeBUS emBUS;
-        AccountBUS accBUS;
         public frmEmplManage(Panel p , frmMenu frm)
         {
             InitializeComponent();
             tc = frm;
+            qldtdd = new QLDTDDServicesClient();
         }
 
         private void frmEmplManage_Load(object sender, EventArgs e)
         {
-            emBUS = new EmployeeBUS();
-            accBUS = new AccountBUS();
-            lsem = new List<eEmployee>();
             LoadDataGriwView();
             this.txtemID.Visible = false;
             this.txtAccId.Visible = false;
@@ -67,7 +64,7 @@ namespace GUI
         }
         private void LoadDataGriwView()
         {
-            List<eEmployee> lsem = emBUS.getAllEmployee();
+            lsem = qldtdd.getAllEmployee().ToList();
             dgvEm.DataSource = lsem;
         }
         private void dgvEm_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
@@ -86,7 +83,7 @@ namespace GUI
 
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)
         {
-            List<eEmployee> le = emBUS.searchItem(txtSearch.Text.TrimEnd());
+            List<eEmployee> le = qldtdd.searchEmployee(txtSearch.Text.TrimEnd()).ToList();
             dgvEm.DataSource = le;
         }
 
@@ -144,7 +141,7 @@ namespace GUI
                     em.Position = txtPosition.Text.TrimEnd();
                     em.AccId = int.Parse(txtAccId.Text);
 
-                    int kq = emBUS.editEmployee(em);
+                    int kq = qldtdd.editEmployee(em);
                     if (kq == 1)
                     {
                         MessageBox.Show("Edit Success !");
@@ -168,7 +165,7 @@ namespace GUI
                     em.State = txtState.Text.TrimEnd();
                     em.Position = txtPosition.Text.TrimEnd();
                     em.AccId = int.Parse(txtAccId.Text);
-                    emBUS.inSertEmployee(em);
+                    qldtdd.inSertEmployee(em);
                       MessageBox.Show("Insert Success !");
                         btnInsert.Text = "Insert";
                         this.btnEdit.Enabled = true;
@@ -272,7 +269,7 @@ namespace GUI
             eAccount ac = new eAccount();
             ac.UserName = txtUsername.Text.TrimEnd();
             ac.PassWord = txtPassWord.Text.TrimEnd();
-            int kq1 = accBUS.InsertAccount(ac);
+            int kq1 = qldtdd.InsertAccount(ac);
             if (kq1 == 1)
             {
                 MessageBox.Show("Insert Success !");
@@ -284,7 +281,7 @@ namespace GUI
                 this.lblnote.Visible = false;
                 txtEnableTrue();
                 returnIndex();
-                txtAccId.Text = accBUS.getAccidbyUsername(txtUsername.Text.TrimEnd());
+                txtAccId.Text = qldtdd.getAccidbyUsername(txtUsername.Text.TrimEnd());
             }
             else
             {

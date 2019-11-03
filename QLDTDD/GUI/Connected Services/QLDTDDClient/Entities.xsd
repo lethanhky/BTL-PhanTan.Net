@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="eAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccId" type="xs:int" />
+      <xs:element minOccurs="0" name="PassWord" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="eAccount" nillable="true" type="tns:eAccount" />
+  <xs:complexType name="ArrayOfeEmployee">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="eEmployee" nillable="true" type="tns:eEmployee" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfeEmployee" nillable="true" type="tns:ArrayOfeEmployee" />
+  <xs:complexType name="eEmployee">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccId" type="xs:int" />
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmpID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Position" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="eEmployee" nillable="true" type="tns:eEmployee" />
+  <xs:complexType name="ArrayOfeImportCoupon">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="eImportCoupon" nillable="true" type="tns:eImportCoupon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfeImportCoupon" nillable="true" type="tns:ArrayOfeImportCoupon" />
+  <xs:complexType name="eImportCoupon">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EmpID" type="xs:int" />
+      <xs:element minOccurs="0" name="ImpID" type="xs:int" />
+      <xs:element minOccurs="0" name="ImpdetailDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Total" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="eImportCoupon" nillable="true" type="tns:eImportCoupon" />
+  <xs:complexType name="ArrayOfeImportCouponDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="eImportCouponDetail" nillable="true" type="tns:eImportCouponDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfeImportCouponDetail" nillable="true" type="tns:ArrayOfeImportCouponDetail" />
+  <xs:complexType name="eImportCouponDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ImpID" type="xs:int" />
+      <xs:element minOccurs="0" name="ImpdetailID" type="xs:int" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="Total" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="eImportCouponDetail" nillable="true" type="tns:eImportCouponDetail" />
+  <xs:complexType name="ArrayOfeOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="eOrder" nillable="true" type="tns:eOrder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfeOrder" nillable="true" type="tns:ArrayOfeOrder" />
+  <xs:complexType name="eOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CusName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmpID" type="xs:int" />
+      <xs:element minOccurs="0" name="EmpName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderID" type="xs:int" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Total" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="eOrder" nillable="true" type="tns:eOrder" />
+  <xs:complexType name="ArrayOfeOrderDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="eOrderDetail" nillable="true" type="tns:eOrderDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfeOrderDetail" nillable="true" type="tns:ArrayOfeOrderDetail" />
+  <xs:complexType name="eOrderDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:double" />
+      <xs:element minOccurs="0" name="DetailID" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderID" type="xs:int" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="TeleID" type="xs:int" />
+      <xs:element minOccurs="0" name="Unitprice" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="eOrderDetail" nillable="true" type="tns:eOrderDetail" />
+  <xs:complexType name="ArrayOfeTelephone">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="eTelephone" nillable="true" type="tns:eTelephone" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfeTelephone" nillable="true" type="tns:ArrayOfeTelephone" />
+  <xs:complexType name="eTelephone">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ImpdetailID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+      <xs:element minOccurs="0" name="Provider" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TeleID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="eTelephone" nillable="true" type="tns:eTelephone" />
+</xs:schema>

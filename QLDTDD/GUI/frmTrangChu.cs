@@ -12,7 +12,8 @@ namespace GUI
 {
     public partial class frmTrangChu : Form
     {
-        public frmTrangChu(Panel p)
+        
+        public frmTrangChu(Panel p, frmMenu frm)
         {
             InitializeComponent();
         }

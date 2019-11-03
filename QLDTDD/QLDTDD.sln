@@ -4,12 +4,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.852
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{0D9FD846-492E-418B-A7A8-4E9BF6E091A3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{121FF30F-FD25-41B4-AE53-5C19FA8AB0BE} = {121FF30F-FD25-41B4-AE53-5C19FA8AB0BE}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{7F6AE74F-E673-4DF8-93F2-410ADB96A583}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS", "BUS\BUS.csproj", "{3E740058-64CF-4A5C-9E8C-F89E50D2CD88}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{3837BA10-2FA5-40C0-A165-9FC772BABF4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfQLDTDD", "WcfQLDTDD\WcfQLDTDD.csproj", "{121FF30F-FD25-41B4-AE53-5C19FA8AB0BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +38,10 @@ Global
 		{3837BA10-2FA5-40C0-A165-9FC772BABF4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3837BA10-2FA5-40C0-A165-9FC772BABF4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3837BA10-2FA5-40C0-A165-9FC772BABF4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{121FF30F-FD25-41B4-AE53-5C19FA8AB0BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{121FF30F-FD25-41B4-AE53-5C19FA8AB0BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{121FF30F-FD25-41B4-AE53-5C19FA8AB0BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{121FF30F-FD25-41B4-AE53-5C19FA8AB0BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
