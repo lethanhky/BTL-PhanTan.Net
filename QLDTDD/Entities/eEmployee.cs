@@ -5,7 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization;
 using System.ServiceModel;
+<<<<<<< HEAD
 
+=======
+>>>>>>> d05ed8fd42505e1fc56a47836cb64569dd2e22d2
 namespace Entities
 {
     [DataContract]
