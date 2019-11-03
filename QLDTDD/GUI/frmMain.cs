@@ -39,7 +39,9 @@ namespace GUI
 
         private void LapHoaDonMenuItem_Click(object sender, EventArgs e)
         {
-
+            PanelParent.Controls.Clear();
+            frmCreateOrder frm = new frmCreateOrder(PanelParent, this);
+            ShowForm(frm);
         }
 
         private void QLNVMenuItem_Click(object sender, EventArgs e)
@@ -58,7 +60,9 @@ namespace GUI
 
         private void TKMenuItem_Click(object sender, EventArgs e)
         {
-
+            PanelParent.Controls.Clear();
+            frmThongKe frm = new frmThongKe(PanelParent, this);
+            ShowForm(frm);
         }
 
         private void QLNVMenuItem_MouseHover(object sender, EventArgs e)

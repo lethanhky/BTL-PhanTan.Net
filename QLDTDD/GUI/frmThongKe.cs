@@ -38,7 +38,7 @@ namespace GUI
         {
             chartSL.Series["Số lượng bán"].Points.Clear();
             chartDT.Series["Doanh thu"].Points.Clear();
-            for (int i = 1; i < 13; i++)
+            for (int i = 1; i < 12; i++)
             {
                 this.chartSL.Series["Số lượng bán"].Points.AddXY(i, qldtdd.LayTheoSLB(i, int.Parse(cbxNam.Text)));
                 this.chartDT.Series["Doanh thu"].Points.AddXY(i, qldtdd.ThongKeTheoTTB(i, int.Parse(cbxNam.Text)));

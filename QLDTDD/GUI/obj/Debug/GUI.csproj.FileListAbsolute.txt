@@ -39,3 +39,4 @@ D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.csprojAssemblyReference.cach
 D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.frmCreateOrder.resources
 D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\bin\Debug\Entities.dll
 D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\bin\Debug\Entities.pdb
+D:\PhanTan\BTL-PhanTan.Net\QLDTDD\GUI\obj\Debug\GUI.frmThongKe.resources
