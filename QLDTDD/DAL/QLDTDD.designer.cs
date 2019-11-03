@@ -54,7 +54,7 @@ namespace DAL
     #endregion
 		
 		public QLDTDDDataContext() : 
-				base(global::DAL.Properties.Settings.Default.QLDTDDConnectionString, mappingSource)
+				base(global::DAL.Properties.Settings.Default.QLDTDDConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}

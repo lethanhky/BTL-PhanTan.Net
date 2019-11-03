@@ -11,3 +11,16 @@ D:\PhanTan\BTL-PhanTan.Net\QLDTDD\WcfQLDTDD\bin\Debug\DAL.pdb
 D:\PhanTan\BTL-PhanTan.Net\QLDTDD\WcfQLDTDD\bin\Debug\DAL.dll.config
 D:\PhanTan\BTL-PhanTan.Net\QLDTDD\WcfQLDTDD\bin\Debug\Entities.pdb
 D:\PhanTan\BTL-PhanTan.Net\QLDTDD\WcfQLDTDD\obj\Debug\WcfQLDTDD.csproj.CopyComplete
+C:\Users\Admin\Documents\BTL-PhanTan.Net\QLDTDD\WcfQLDTDD\bin\Debug\WcfQLDTDD.dll.config
+C:\Users\Admin\Documents\BTL-PhanTan.Net\QLDTDD\WcfQLDTDD\bin\Debug\WcfQLDTDD.dll
+C:\Users\Admin\Documents\BTL-PhanTan.Net\QLDTDD\WcfQLDTDD\bin\Debug\WcfQLDTDD.pdb
+C:\Users\Admin\Documents\BTL-PhanTan.Net\QLDTDD\WcfQLDTDD\bin\Debug\DAL.dll
+C:\Users\Admin\Documents\BTL-PhanTan.Net\QLDTDD\WcfQLDTDD\bin\Debug\Entities.dll
+C:\Users\Admin\Documents\BTL-PhanTan.Net\QLDTDD\WcfQLDTDD\bin\Debug\DAL.pdb
+C:\Users\Admin\Documents\BTL-PhanTan.Net\QLDTDD\WcfQLDTDD\bin\Debug\DAL.dll.config
+C:\Users\Admin\Documents\BTL-PhanTan.Net\QLDTDD\WcfQLDTDD\bin\Debug\Entities.pdb
+C:\Users\Admin\Documents\BTL-PhanTan.Net\QLDTDD\WcfQLDTDD\obj\Debug\WcfQLDTDD.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\BTL-PhanTan.Net\QLDTDD\WcfQLDTDD\obj\Debug\WcfQLDTDD.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\BTL-PhanTan.Net\QLDTDD\WcfQLDTDD\obj\Debug\WcfQLDTDD.csproj.CopyComplete
+C:\Users\Admin\Documents\BTL-PhanTan.Net\QLDTDD\WcfQLDTDD\obj\Debug\WcfQLDTDD.dll
+C:\Users\Admin\Documents\BTL-PhanTan.Net\QLDTDD\WcfQLDTDD\obj\Debug\WcfQLDTDD.pdb

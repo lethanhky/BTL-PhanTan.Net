@@ -2,95 +2,95 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 16.75, 8.5" name="QLDTDD">
   <DataContextMoniker Name="/QLDTDDDataContext" />
   <nestedChildShapes>
-    <classShape Id="ca7303c8-06ef-48c7-86ac-4c1bad19dc2c" absoluteBounds="0.75, 2.75, 2, 1.3862939453125005">
+    <classShape Id="b8ac6a15-f339-47a8-ae8f-0b59544ad281" absoluteBounds="0.75, 2.75, 2, 1.3862939453125005">
       <DataClassMoniker Name="/QLDTDDDataContext/Account" />
       <nestedChildShapes>
-        <elementListCompartment Id="92a4a1d9-4429-4ee9-be94-9f13a5ade683" absoluteBounds="0.765, 3.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="50ffaac6-b87e-4857-89a9-cbea93bec8e3" absoluteBounds="0.765, 3.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="69ea3ee9-3307-43ce-9762-c3d76ecc9a3e" absoluteBounds="11.75, 1.125, 2, 1.9631982421875003">
+    <classShape Id="6f039f60-8fd3-4b41-9271-904a8f339755" absoluteBounds="11.75, 1.125, 2, 1.9631982421875003">
       <DataClassMoniker Name="/QLDTDDDataContext/Telephone" />
       <nestedChildShapes>
-        <elementListCompartment Id="1d68cc2f-2fec-4954-a7a6-1c4d02a5ff14" absoluteBounds="11.765, 1.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="da295d66-3e35-42b4-8120-bc755a526171" absoluteBounds="11.765, 1.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="c67f9198-dff7-45c0-827b-667d7708a379" absoluteBounds="3.5, 2.375, 2, 2.1554996744791666">
+    <classShape Id="44e0a619-59bf-430e-bc0d-0930b12358c8" absoluteBounds="3.5, 2.375, 2, 2.1554996744791666">
       <DataClassMoniker Name="/QLDTDDDataContext/Employee" />
       <nestedChildShapes>
-        <elementListCompartment Id="303e3108-0988-4fed-aa7a-cdab18c1dd17" absoluteBounds="3.515, 2.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="23aac2b5-1870-496e-b19c-40c7d561d6f4" absoluteBounds="3.515, 2.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="fce8396d-98a5-47eb-abf7-9e43143f5379" absoluteBounds="6.25, 1.25, 2, 1.5785953776041666">
+    <classShape Id="b57c2210-ea80-4832-a1f2-74fd0d301faf" absoluteBounds="6.25, 1.25, 2, 1.5785953776041666">
       <DataClassMoniker Name="/QLDTDDDataContext/ImportCoupon" />
       <nestedChildShapes>
-        <elementListCompartment Id="adfc356a-969f-4e2d-948f-8d9d458a1861" absoluteBounds="6.265, 1.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="70a3d856-8591-47c7-81ed-6f58f88dba3b" absoluteBounds="6.265, 1.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="a581ce76-f832-4716-b0ce-bd10c0339ef7" absoluteBounds="9, 1.125, 2, 1.7708968098958329">
+    <classShape Id="755da3ce-8273-4773-874b-8cfd74478050" absoluteBounds="9, 1.125, 2, 1.7708968098958329">
       <DataClassMoniker Name="/QLDTDDDataContext/ImportCouponDetail" />
       <nestedChildShapes>
-        <elementListCompartment Id="bc87156f-e2de-443f-8780-667c73887212" absoluteBounds="9.015, 1.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="5156bf6a-6c9f-492e-ad73-12b5459b6424" absoluteBounds="9.015, 1.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="c5e9e413-dfea-4df3-94aa-86fed33cb782" absoluteBounds="6.25, 3.75, 2, 2.1554996744791666">
+    <classShape Id="46e04fba-34d1-4d69-ac6f-8b75f4aca94b" absoluteBounds="6.25, 3.75, 2, 2.1554996744791666">
       <DataClassMoniker Name="/QLDTDDDataContext/Order" />
       <nestedChildShapes>
-        <elementListCompartment Id="de127cff-cb03-4185-9e55-eae05336c3b7" absoluteBounds="6.265, 4.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="2df07688-e2f7-4d7e-ba6a-79fe7d40c79c" absoluteBounds="6.265, 4.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="0ce8fd2b-7619-40d1-96c9-a75dfb0d617c" absoluteBounds="14.5, 2.625, 2, 1.7708968098958335">
+    <classShape Id="75d17b30-4673-45bb-9e45-8b97c9f7f12f" absoluteBounds="14.5, 2.625, 2, 1.7708968098958335">
       <DataClassMoniker Name="/QLDTDDDataContext/OrderDetail" />
       <nestedChildShapes>
-        <elementListCompartment Id="b9387f30-a89a-4d6e-a19c-e6d1d1688425" absoluteBounds="14.515, 3.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="f26b4838-90f4-4bc6-be6e-ee667046ce90" absoluteBounds="14.515, 3.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <associationConnector edgePoints="[(2.75 : 3.44314697265625); (3.5 : 3.44314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/QLDTDDDataContext/Account/Account_Employee" />
       <nodes>
-        <classShapeMoniker Id="ca7303c8-06ef-48c7-86ac-4c1bad19dc2c" />
-        <classShapeMoniker Id="c67f9198-dff7-45c0-827b-667d7708a379" />
+        <classShapeMoniker Id="b8ac6a15-f339-47a8-ae8f-0b59544ad281" />
+        <classShapeMoniker Id="44e0a619-59bf-430e-bc0d-0930b12358c8" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(5.5 : 2.60179768880208); (6.25 : 2.60179768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/QLDTDDDataContext/Employee/Employee_ImportCoupon" />
       <nodes>
-        <classShapeMoniker Id="c67f9198-dff7-45c0-827b-667d7708a379" />
-        <classShapeMoniker Id="fce8396d-98a5-47eb-abf7-9e43143f5379" />
+        <classShapeMoniker Id="44e0a619-59bf-430e-bc0d-0930b12358c8" />
+        <classShapeMoniker Id="b57c2210-ea80-4832-a1f2-74fd0d301faf" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(11 : 2.01044840494792); (11.75 : 2.01044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/QLDTDDDataContext/ImportCouponDetail/ImportCouponDetail_Telephone" />
       <nodes>
-        <classShapeMoniker Id="a581ce76-f832-4716-b0ce-bd10c0339ef7" />
-        <classShapeMoniker Id="69ea3ee9-3307-43ce-9762-c3d76ecc9a3e" />
+        <classShapeMoniker Id="755da3ce-8273-4773-874b-8cfd74478050" />
+        <classShapeMoniker Id="6f039f60-8fd3-4b41-9271-904a8f339755" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(8.25 : 2.03929768880208); (9 : 2.03929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/QLDTDDDataContext/ImportCoupon/ImportCoupon_ImportCouponDetail" />
       <nodes>
-        <classShapeMoniker Id="fce8396d-98a5-47eb-abf7-9e43143f5379" />
-        <classShapeMoniker Id="a581ce76-f832-4716-b0ce-bd10c0339ef7" />
+        <classShapeMoniker Id="b57c2210-ea80-4832-a1f2-74fd0d301faf" />
+        <classShapeMoniker Id="755da3ce-8273-4773-874b-8cfd74478050" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(5.5 : 4.14024983723958); (6.25 : 4.14024983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/QLDTDDDataContext/Employee/Employee_Order" />
       <nodes>
-        <classShapeMoniker Id="c67f9198-dff7-45c0-827b-667d7708a379" />
-        <classShapeMoniker Id="c5e9e413-dfea-4df3-94aa-86fed33cb782" />
+        <classShapeMoniker Id="44e0a619-59bf-430e-bc0d-0930b12358c8" />
+        <classShapeMoniker Id="46e04fba-34d1-4d69-ac6f-8b75f4aca94b" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(8.25 : 4.07294840494792); (14.5 : 4.07294840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/QLDTDDDataContext/Order/Order_OrderDetail" />
       <nodes>
-        <classShapeMoniker Id="c5e9e413-dfea-4df3-94aa-86fed33cb782" />
-        <classShapeMoniker Id="0ce8fd2b-7619-40d1-96c9-a75dfb0d617c" />
+        <classShapeMoniker Id="46e04fba-34d1-4d69-ac6f-8b75f4aca94b" />
+        <classShapeMoniker Id="75d17b30-4673-45bb-9e45-8b97c9f7f12f" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(13.75 : 2.85659912109375); (14.5 : 2.85659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/QLDTDDDataContext/Telephone/Telephone_OrderDetail" />
       <nodes>
-        <classShapeMoniker Id="69ea3ee9-3307-43ce-9762-c3d76ecc9a3e" />
-        <classShapeMoniker Id="0ce8fd2b-7619-40d1-96c9-a75dfb0d617c" />
+        <classShapeMoniker Id="6f039f60-8fd3-4b41-9271-904a8f339755" />
+        <classShapeMoniker Id="75d17b30-4673-45bb-9e45-8b97c9f7f12f" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

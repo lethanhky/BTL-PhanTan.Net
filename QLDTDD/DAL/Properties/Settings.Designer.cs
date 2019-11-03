@@ -32,5 +32,15 @@ namespace DAL.Properties {
                 return ((string)(this["QLDTDDConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QLDTDD;Integrated Security=True")]
+        public string QLDTDDConnectionString1 {
+            get {
+                return ((string)(this["QLDTDDConnectionString1"]));
+            }
+        }
     }
 }
